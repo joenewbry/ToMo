@@ -21,6 +21,13 @@
 		D801354019B7943D00906014 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D801352219B7943D00906014 /* UIKit.framework */; };
 		D801354819B7943D00906014 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D801354619B7943D00906014 /* InfoPlist.strings */; };
 		D801354A19B7943D00906014 /* ToMoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D801354919B7943D00906014 /* ToMoTests.m */; };
+		D801355519B7B47500906014 /* JSNWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D801355419B7B47500906014 /* JSNWebViewController.m */; };
+		D801357219B7C61600906014 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = D801356E19B7C61600906014 /* facebook.png */; };
+		D801357319B7C61600906014 /* facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D801356F19B7C61600906014 /* facebook@2x.png */; };
+		D801357419B7C61600906014 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = D801357019B7C61600906014 /* mail.png */; };
+		D801357519B7C61600906014 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D801357119B7C61600906014 /* mail@2x.png */; };
+		D801357819B7C64700906014 /* TOMO.png in Resources */ = {isa = PBXBuildFile; fileRef = D801357619B7C64700906014 /* TOMO.png */; };
+		D801357919B7C64700906014 /* TOMO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D801357719B7C64700906014 /* TOMO@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,14 @@
 		D801354519B7943D00906014 /* ToMoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToMoTests-Info.plist"; sourceTree = "<group>"; };
 		D801354719B7943D00906014 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D801354919B7943D00906014 /* ToMoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToMoTests.m; sourceTree = "<group>"; };
+		D801355319B7B47500906014 /* JSNWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNWebViewController.h; sourceTree = "<group>"; };
+		D801355419B7B47500906014 /* JSNWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNWebViewController.m; sourceTree = "<group>"; };
+		D801356E19B7C61600906014 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		D801356F19B7C61600906014 /* facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook@2x.png"; sourceTree = "<group>"; };
+		D801357019B7C61600906014 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		D801357119B7C61600906014 /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
+		D801357619B7C64700906014 /* TOMO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOMO.png; sourceTree = "<group>"; };
+		D801357719B7C64700906014 /* TOMO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TOMO@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +127,9 @@
 		D801352419B7943D00906014 /* ToMo */ = {
 			isa = PBXGroup;
 			children = (
+				D801355319B7B47500906014 /* JSNWebViewController.h */,
+				D801355619B7BF6600906014 /* assets */,
+				D801355419B7B47500906014 /* JSNWebViewController.m */,
 				D801352D19B7943D00906014 /* JSNAppDelegate.h */,
 				D801352E19B7943D00906014 /* JSNAppDelegate.m */,
 				D801353019B7943D00906014 /* Main.storyboard */,
@@ -150,6 +168,27 @@
 				D801354619B7943D00906014 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D801355619B7BF6600906014 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D801356D19B7C61600906014 /* img */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		D801356D19B7C61600906014 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				D801356E19B7C61600906014 /* facebook.png */,
+				D801356F19B7C61600906014 /* facebook@2x.png */,
+				D801357019B7C61600906014 /* mail.png */,
+				D801357119B7C61600906014 /* mail@2x.png */,
+				D801357619B7C64700906014 /* TOMO.png */,
+				D801357719B7C64700906014 /* TOMO@2x.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D801357319B7C61600906014 /* facebook@2x.png in Resources */,
 				D801353719B7943D00906014 /* Images.xcassets in Resources */,
+				D801357819B7C64700906014 /* TOMO.png in Resources */,
+				D801357919B7C64700906014 /* TOMO@2x.png in Resources */,
+				D801357519B7C61600906014 /* mail@2x.png in Resources */,
+				D801357419B7C61600906014 /* mail.png in Resources */,
+				D801357219B7C61600906014 /* facebook.png in Resources */,
 				D801352919B7943D00906014 /* InfoPlist.strings in Resources */,
 				D801353219B7943D00906014 /* Main.storyboard in Resources */,
 			);
@@ -251,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D801352F19B7943D00906014 /* JSNAppDelegate.m in Sources */,
+				D801355519B7B47500906014 /* JSNWebViewController.m in Sources */,
 				D801352B19B7943D00906014 /* main.m in Sources */,
 				D801353519B7943D00906014 /* JSNViewController.m in Sources */,
 			);
