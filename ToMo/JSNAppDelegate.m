@@ -13,6 +13,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // set global app defaults
+    
+    // page controls are grey 
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.0/245.0 green:183.0/245.0 blue:244.0/245 alpha:1.0];
+    pageControl.backgroundColor = [UIColor clearColor];
+     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 							
