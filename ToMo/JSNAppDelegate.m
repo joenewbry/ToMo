@@ -29,7 +29,6 @@
     [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDark];
     
     // Navigation bar
-//    [[UINavigationBar appearance] setBackgroundColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     //[UINavigationBar appearance].backItem.title = @" ";
     

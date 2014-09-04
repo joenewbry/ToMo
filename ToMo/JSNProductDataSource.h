@@ -10,10 +10,10 @@
 
 @interface JSNProductDataSource : NSObject
 
-- (UIImage *)imageForItemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)nameForItemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)descriptionForItemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSDate *)expirationDateForItemAtIndexPath:(NSIndexPath *)indexPath;
+- (UIImage *)imageForItemAtIndex:(NSUInteger)index;
+- (NSString *)nameForItemAtIndex:(NSUInteger)index;
+- (NSString *)descriptionForItemAtIndex:(NSUInteger)index;
+- (NSDate *)expirationDateForItemAtIndex:(NSUInteger)index;
 
 - (NSInteger)numberOfItems;
 

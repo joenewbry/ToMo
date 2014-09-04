@@ -32,25 +32,24 @@
     return [self.itemNames count];
 }
 
-- (UIImage *)imageForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UIImage *)imageForItemAtIndex:(NSUInteger)index
 {
-    NSUInteger row = indexPath.row;
-    NSString *itemName = [self.itemNames objectAtIndex:row];
+    NSString *itemName = [self.itemNames objectAtIndex:index];
     NSString *imagePath = [itemName stringByAppendingString:@".jpg"];
     return [UIImage imageNamed:imagePath];
 }
 
-- (NSString *)nameForItemAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *)nameForItemAtIndex:(NSUInteger)index
 {
-    return [self.itemNames objectAtIndex:indexPath.row];
+    return [self.itemNames objectAtIndex:index];
 }
 
-- (NSString *)descriptionForItemAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *)descriptionForItemAtIndex:(NSUInteger)index
 {
     return @"Default string";
 }
 
-- (NSDate *)expirationDateForItemAtIndexPath:(NSIndexPath *)indexPath
+- (NSDate *)expirationDateForItemAtIndex:(NSUInteger)index
 {
     return [NSDate dateWithTimeIntervalSinceNow:NSTimeIntervalSince1970];
 }

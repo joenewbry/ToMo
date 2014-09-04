@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSNItemTableViewCell : UITableViewCell
+@interface JSNItemView : UIView
 
 @property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;
 
-- (id)initWithImage:(UIImage *)image;
-- (id)initWithImage:(UIImage *)image andTitle:(NSString *)title andPrice:(NSNumber *)price;
+- (id)init;
 
 @end

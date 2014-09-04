@@ -8,7 +8,7 @@
 
 #import "JSNAutoScrollingTableViewController.h"
 #import "JSNProductDataSource.h"
-#import "JSNItemTableViewCell.h"
+#import "JSNItemView.h"
 
 @interface JSNAutoScrollingTableViewController ()
 
@@ -51,12 +51,12 @@ static NSString *cellIdentifier = @"ItemTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JSNItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    JSNItemView *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.itemDescriptionLabel.text = [self.dataSource descriptionForItemAtIndexPath:indexPath];
-    cell.itemImageView.image = [self.dataSource imageForItemAtIndexPath:indexPath];
+    //cell.itemDescriptionLabel.text = [self.dataSource descriptionForItemAtIndexPath:indexPath];
+    //cell.itemImageView.image = [self.dataSource imageForItemAtIndexPath:indexPath];
     
-    return cell;
+    return nil;
 }
 
 
