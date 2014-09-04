@@ -5,27 +5,19 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Auto Scrolling Table View Controller-->
         <scene sceneID="zI3-9I-UMd">
             <objects>
-                <tableViewController id="X6k-pg-2Cc" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="215" sectionHeaderHeight="22" sectionFooterHeight="22" id="hOf-kA-90g">
+                <tableViewController id="X6k-pg-2Cc" customClass="JSNAutoScrollingTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="211" sectionHeaderHeight="22" sectionFooterHeight="22" id="hOf-kA-90g">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="215" id="xSG-y9-4kq">
-                                <rect key="frame" x="0.0" y="22" width="320" height="215"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xSG-y9-4kq" id="Mks-uT-FDW">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="214"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <connections>
-                            <outlet property="dataSource" destination="X6k-pg-2Cc" id="Kyj-19-aRX"/>
-                            <outlet property="delegate" destination="X6k-pg-2Cc" id="zQ1-HF-eHC"/>
+                            <outlet property="dataSource" destination="X6k-pg-2Cc" id="DvA-aH-iqo"/>
+                            <outlet property="delegate" destination="X6k-pg-2Cc" id="HAo-F6-Maq"/>
                         </connections>
                     </tableView>
                 </tableViewController>

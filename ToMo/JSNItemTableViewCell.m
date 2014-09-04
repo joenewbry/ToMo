@@ -2,23 +2,17 @@
 //  JSNItemTableViewCell.m
 //  ToMo
 //
-//  Created by Joe Newbry on 9/3/14.
+//  Created by Joe Newbry on 9/4/14.
 //  Copyright (c) 2014 Joe Newbry. All rights reserved.
 //
 
 #import "JSNItemTableViewCell.h"
 
+@interface JSNItemTableViewCell ()
+
+@end
+
 @implementation JSNItemTableViewCell
-
-+ (JSNItemTableViewCell *)cellWithImage:(UIImage *)image
-{
-    return nil;
-}
-
-+ (JSNItemTableViewCell *)cellWithImage:(UIImage *)image andTitle:(NSString *)title andDescription:(NSString *)description andExpiration:(NSDate *)date
-{
-    return nil;
-}
 
 - (void)awakeFromNib
 {

@@ -15,4 +15,6 @@
 - (NSString *)descriptionForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (NSDate *)expirationDateForItemAtIndexPath:(NSIndexPath *)indexPath;
 
+- (NSInteger)numberOfItems;
+
 @end

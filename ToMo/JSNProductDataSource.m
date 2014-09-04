@@ -22,14 +22,22 @@
 - (id)init
 {
     if (self == [super init]) {
-        _itemNames = @[@"Keysmart", @"Tribal Steel", @"Del Ben", @"Agustav", @"The Forma", @"Garrett Leight Cali Optical", @"iconbit", @"Wassily Kandinsky", @"Novo Watches", @"SmartPlane"];
+        _itemNames = @[@"Del Ben", @"Agustav", @"The Forma", @"Garrett Leight Cali Optical", @"iconbit", @"Wassily Kandinsky", @"Novo Watches", @"SmartPlane"];
     }
     return self;
 }
 
+- (NSInteger)numberOfItems
+{
+    return [self.itemNames count];
+}
+
 - (UIImage *)imageForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [UIImage imageNamed:@"Agustav.jpg"];
+    NSUInteger row = indexPath.row;
+    NSString *itemName = [self.itemNames objectAtIndex:row];
+    NSString *imagePath = [itemName stringByAppendingString:@".jpg"];
+    return [UIImage imageNamed:imagePath];
 }
 
 - (NSString *)nameForItemAtIndexPath:(NSIndexPath *)indexPath
