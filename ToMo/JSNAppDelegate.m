@@ -16,13 +16,24 @@
     
     // set global app defaults
     
-    // page controls are grey 
+    // page controls white and neon blue
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor whiteColor];
     pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.0/245.0 green:183.0/245.0 blue:244.0/245 alpha:1.0];
     pageControl.backgroundColor = [UIColor clearColor];
-     
+    
+    // status bar is always white
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    // keyboard is dark to match dark theme
+    [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDark];
+    
+    // Navigation bar
+//    [[UINavigationBar appearance] setBackgroundColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //[UINavigationBar appearance].backItem.title = @" ";
+    
+    
     return YES;
 }
 							

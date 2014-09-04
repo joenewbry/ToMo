@@ -41,6 +41,11 @@
 		D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D801358919B7D58300906014 /* Tribal Steel.jpg */; };
 		D801359419B7D58300906014 /* Wassily.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D801358A19B7D58300906014 /* Wassily.jpg */; };
 		D801359719B7D71C00906014 /* JSNPushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359619B7D71C00906014 /* JSNPushNoAnimationSegue.m */; };
+		D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */; };
+		D801359D19B7EA0400906014 /* JSNLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359C19B7EA0400906014 /* JSNLoginViewController.m */; };
+		D80135A119B7FB9700906014 /* JSNItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359F19B7FB9700906014 /* JSNItemTableViewCell.m */; };
+		D80135A219B7FB9700906014 /* JSNItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80135A019B7FB9700906014 /* JSNItemTableViewCell.xib */; };
+		D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D80135A419B7FBD300906014 /* JSNProductDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,15 @@
 		D801358A19B7D58300906014 /* Wassily.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wassily.jpg; sourceTree = "<group>"; };
 		D801359519B7D71C00906014 /* JSNPushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNPushNoAnimationSegue.h; sourceTree = "<group>"; };
 		D801359619B7D71C00906014 /* JSNPushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPushNoAnimationSegue.m; sourceTree = "<group>"; };
+		D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNEmailLoginOrSignUpViewController.h; sourceTree = "<group>"; };
+		D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNEmailLoginOrSignUpViewController.m; sourceTree = "<group>"; };
+		D801359B19B7EA0400906014 /* JSNLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNLoginViewController.h; sourceTree = "<group>"; };
+		D801359C19B7EA0400906014 /* JSNLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNLoginViewController.m; sourceTree = "<group>"; };
+		D801359E19B7FB9700906014 /* JSNItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNItemTableViewCell.h; sourceTree = "<group>"; };
+		D801359F19B7FB9700906014 /* JSNItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNItemTableViewCell.m; sourceTree = "<group>"; };
+		D80135A019B7FB9700906014 /* JSNItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNItemTableViewCell.xib; sourceTree = "<group>"; };
+		D80135A319B7FBD300906014 /* JSNProductDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductDataSource.h; sourceTree = "<group>"; };
+		D80135A419B7FBD300906014 /* JSNProductDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +173,15 @@
 				D801352D19B7943D00906014 /* JSNAppDelegate.h */,
 				D801352E19B7943D00906014 /* JSNAppDelegate.m */,
 				D801353019B7943D00906014 /* Main.storyboard */,
+				D801359E19B7FB9700906014 /* JSNItemTableViewCell.h */,
+				D801359F19B7FB9700906014 /* JSNItemTableViewCell.m */,
+				D80135A319B7FBD300906014 /* JSNProductDataSource.h */,
+				D80135A419B7FBD300906014 /* JSNProductDataSource.m */,
+				D80135A019B7FB9700906014 /* JSNItemTableViewCell.xib */,
+				D801359B19B7EA0400906014 /* JSNLoginViewController.h */,
+				D801359C19B7EA0400906014 /* JSNLoginViewController.m */,
+				D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */,
+				D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */,
 				D801357A19B7C8F600906014 /* JSNPageContentViewController.h */,
 				D801357B19B7C8F600906014 /* JSNPageContentViewController.m */,
 				D801357D19B7CC2600906014 /* JSNPageViewController.h */,
@@ -323,6 +346,7 @@
 			files = (
 				D801357319B7C61600906014 /* facebook@2x.png in Resources */,
 				D801358D19B7D58300906014 /* Forma.jpg in Resources */,
+				D80135A219B7FB9700906014 /* JSNItemTableViewCell.xib in Resources */,
 				D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */,
 				D801353719B7943D00906014 /* Images.xcassets in Resources */,
 				D801357819B7C64700906014 /* TOMO.png in Resources */,
@@ -358,13 +382,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80135A119B7FB9700906014 /* JSNItemTableViewCell.m in Sources */,
 				D801357C19B7C8F600906014 /* JSNPageContentViewController.m in Sources */,
 				D801352F19B7943D00906014 /* JSNAppDelegate.m in Sources */,
+				D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */,
 				D801355519B7B47500906014 /* JSNWebViewController.m in Sources */,
 				D801357F19B7CC2600906014 /* JSNPageViewController.m in Sources */,
+				D801359D19B7EA0400906014 /* JSNLoginViewController.m in Sources */,
 				D801352B19B7943D00906014 /* main.m in Sources */,
 				D801353519B7943D00906014 /* JSNViewController.m in Sources */,
 				D801359719B7D71C00906014 /* JSNPushNoAnimationSegue.m in Sources */,
+				D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
