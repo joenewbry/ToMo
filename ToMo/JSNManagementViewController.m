@@ -38,11 +38,11 @@
 {
     
     // staggered
-    [UIView animateWithDuration:.8 animations:^{
+    [UIView animateWithDuration:.4 animations:^{
         self.signUpView.alpha = 0.0;
     }];
     
-    [UIView animateWithDuration:.4 animations:^{
+    [UIView animateWithDuration:.2 animations:^{
         self.shadowView.alpha = 0.0;
     }];
 }

@@ -17,16 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-AG-7jY" customClass="SwipeView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2F-AG-7jY" customClass="SwipeView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqr-d7-pse">
-                                <rect key="frame" x="129" y="258" width="61" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqr-d7-pse">
+                                <rect key="frame" x="20" y="258" width="280" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.71764705880000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="6kM-WC-GCv"/>
+                                    <constraint firstAttribute="width" constant="280" id="pFB-Tm-dxz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -35,6 +41,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d2F-AG-7jY" firstAttribute="top" secondItem="2dF-I6-oSe" secondAttribute="top" id="AEA-6h-mKg"/>
+                            <constraint firstItem="iqr-d7-pse" firstAttribute="top" secondItem="TtV-OL-wwt" secondAttribute="bottom" constant="258" id="BEZ-jQ-Gf6"/>
+                            <constraint firstAttribute="trailing" secondItem="iqr-d7-pse" secondAttribute="trailing" constant="20" id="JQM-bJ-eEx"/>
+                            <constraint firstItem="d2F-AG-7jY" firstAttribute="centerX" secondItem="iqr-d7-pse" secondAttribute="centerX" id="JmO-ZK-OQD"/>
+                            <constraint firstItem="iqr-d7-pse" firstAttribute="leading" secondItem="2dF-I6-oSe" secondAttribute="leading" constant="20" id="Pjh-rC-A2J"/>
+                            <constraint firstItem="d2F-AG-7jY" firstAttribute="leading" secondItem="2dF-I6-oSe" secondAttribute="leading" id="UVt-SO-F3d"/>
+                            <constraint firstItem="d2F-AG-7jY" firstAttribute="centerY" secondItem="iqr-d7-pse" secondAttribute="centerY" id="nrv-ab-Eyl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="iqr-d7-pse" id="Wqq-tw-6vB"/>

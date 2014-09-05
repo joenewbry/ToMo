@@ -142,7 +142,7 @@
 - (void)stopScrolling
 {
     self.scrollingItemView.autoscroll = 0.0;
-    self.scrollingItemView.wrapEnabled = NO;
+    self.scrollingItemView.wrapEnabled = YES;
     
     self.backButton.hidden = false; // show back button when not scrolling
 
