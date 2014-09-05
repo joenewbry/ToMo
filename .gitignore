@@ -22,7 +22,5 @@ ToMo.xcworkspace/xcshareddata/
 *.xccheckout
 
 # Pods Config
-Pods
-Podfile.lock
 
 # Untracked Folders, files to be kept locally, etc...
