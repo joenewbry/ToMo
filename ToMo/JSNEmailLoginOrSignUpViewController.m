@@ -50,10 +50,7 @@
     [_passwordTextField setLeftViewMode:UITextFieldViewModeAlways];
     [_passwordTextField setLeftView:passwordSpacerView];
     _passwordTextField.layer.cornerRadius = cornerRadius;
-    
-    _submitButton.titleLabel.text = _submitButtonTitleText;
-    _submitButton.layer.borderWidth = 1.0;
-    _submitButton.layer.borderColor = [UIColor whiteColor].CGColor;
+
     _submitButton.layer.cornerRadius = cornerRadius;
     
 }
@@ -71,7 +68,9 @@
 
 
 - (IBAction)didPressSubmitButton:(id)sender {
-    NSLog(@"Dismiss the whole signin flow on succesful signup/login or else display error message");
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
 }
 
 /*

@@ -11,6 +11,7 @@
 @interface JSNPageContentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *taglineLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *walkthroughImage;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 
 @end
 
@@ -32,6 +33,10 @@
     
     self.taglineLabel.text = self.titleText;
     self.walkthroughImage.image = [UIImage imageNamed:self.imageFile];
+    self.signUpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    if (self.pageIndex == 2) self.signUpButton.hidden = NO;
+    if (self.pageIndex != 2) self.signUpButton.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,9 +45,6 @@
     // Dispose of any resources that can be recreated.
     
 
-}
-- (IBAction)popToRootViewController:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:NO];
 }
 
 /*
