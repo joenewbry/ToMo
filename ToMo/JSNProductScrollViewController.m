@@ -13,6 +13,9 @@
 @interface JSNProductScrollViewController ()
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+
+@property BOOL isSignUp;
 
 @end
 
@@ -33,20 +36,26 @@
     _scrollingItemView.pagingEnabled = NO;
     _scrollingItemView.vertical = YES;
     _scrollingItemView.truncateFinalPage = YES;
+    _scrollingItemView.defersItemViewLoading = YES; // smooths out scroll animation (may lead to gaps)
     
     _scrollingItemView.dataSource = self;
     _scrollingItemView.delegate = self;
     
+    _isSignUp = true;
+    
     [self startScrolling];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSignUpView) name:@"JSNShowSignUpView" object:nil];
 }
 
 - (void)dismissSignUpView
 {
+    _isSignUp = false;
+    [self reloadVisibleItems];
+    
     [self stopScrolling];
+    self.backButton.hidden = false;
+    
 }
 
 - (void)showSignUpView
@@ -72,6 +81,35 @@
 {
     [self startScrolling];
 }
+- (IBAction)didPressBack:(id)sender {
+    
+    // display of scrolling item view dependent on isSignUp
+    _isSignUp = true;
+    
+    // always three visible items on screen
+    
+    [self reloadVisibleItems];
+
+    [self startScrolling];
+    
+    
+    self.backButton.hidden = true;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNShowSignUpView" object:nil];
+}
+
+- (void)reloadVisibleItems
+{
+    NSInteger firstItemIndex = [self.scrollingItemView.indexesForVisibleItems.firstObject integerValue];
+    NSInteger secondItemIndex = [[self.scrollingItemView.indexesForVisibleItems objectAtIndex:1] integerValue];
+    NSInteger thirdItemIndex = [self.scrollingItemView.indexesForVisibleItems.lastObject integerValue];
+    
+    
+    [self.scrollingItemView reloadItemAtIndex:firstItemIndex];
+    [self.scrollingItemView reloadItemAtIndex:secondItemIndex];    
+    [self.scrollingItemView reloadItemAtIndex:thirdItemIndex];
+}
+
+
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
@@ -87,6 +125,8 @@
     JSNItemView *itemView = (JSNItemView *)view;
     
     itemView.itemImageView.image = [self.dataSource imageForItemAtIndex:(NSUInteger)index];
+    [itemView.itemDescriptionLabel setText:[self.dataSource nameForItemAtIndex:(NSUInteger)index]];
+    itemView.itemDescriptionLabel.hidden = _isSignUp; // if sign up screen is displayed hide item description
     
     return itemView;
 }

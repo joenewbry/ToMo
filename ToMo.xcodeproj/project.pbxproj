@@ -202,38 +202,15 @@
 		D801352419B7943D00906014 /* ToMo */ = {
 			isa = PBXGroup;
 			children = (
-				D8E98CEF19B978020041EC0A /* JSNManagementViewController.h */,
-				D8E98CF019B978020041EC0A /* JSNManagementViewController.m */,
-				D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */,
-				D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */,
-				D87F62B019B9118B00CF94FE /* JSNProductScrollViewController.xib */,
-				D89AE91419B8F1090098BA95 /* JSNItemView.h */,
-				D89AE91519B8F1090098BA95 /* JSNItemView.m */,
-				D80135A019B7FB9700906014 /* JSNItemView.xib */,
 				D801352D19B7943D00906014 /* JSNAppDelegate.h */,
 				D801352E19B7943D00906014 /* JSNAppDelegate.m */,
 				D801353019B7943D00906014 /* Main.storyboard */,
-				D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */,
-				D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */,
-				D89AE91719B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.h */,
-				D89AE91819B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.m */,
-				D80135A319B7FBD300906014 /* JSNProductDataSource.h */,
-				D80135A419B7FBD300906014 /* JSNProductDataSource.m */,
-				D801359B19B7EA0400906014 /* JSNLoginViewController.h */,
-				D801359C19B7EA0400906014 /* JSNLoginViewController.m */,
-				D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */,
-				D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */,
-				D801357A19B7C8F600906014 /* JSNPageContentViewController.h */,
-				D801357B19B7C8F600906014 /* JSNPageContentViewController.m */,
-				D801357D19B7CC2600906014 /* JSNPageViewController.h */,
-				D801357E19B7CC2600906014 /* JSNPageViewController.m */,
-				D801355319B7B47500906014 /* JSNWebViewController.h */,
+				D8E98CF219BA2FEE0041EC0A /* Controllers */,
+				D8E98CF319BA30060041EC0A /* Views */,
+				D8E98CF419BA301C0041EC0A /* Models */,
 				D801355619B7BF6600906014 /* assets */,
-				D801355419B7B47500906014 /* JSNWebViewController.m */,
 				D801359519B7D71C00906014 /* JSNPushNoAnimationSegue.h */,
 				D801359619B7D71C00906014 /* JSNPushNoAnimationSegue.m */,
-				D801353319B7943D00906014 /* JSNViewController.h */,
-				D801353419B7943D00906014 /* JSNViewController.m */,
 				D801353619B7943D00906014 /* Images.xcassets */,
 				D801352519B7943D00906014 /* Supporting Files */,
 			);
@@ -322,6 +299,53 @@
 			name = "Sign Up";
 			sourceTree = "<group>";
 		};
+		D8E98CF219BA2FEE0041EC0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8E98CEF19B978020041EC0A /* JSNManagementViewController.h */,
+				D8E98CF019B978020041EC0A /* JSNManagementViewController.m */,
+				D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */,
+				D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */,
+				D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */,
+				D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */,
+				D89AE91719B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.h */,
+				D89AE91819B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.m */,
+				D801359B19B7EA0400906014 /* JSNLoginViewController.h */,
+				D801359C19B7EA0400906014 /* JSNLoginViewController.m */,
+				D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */,
+				D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */,
+				D801357A19B7C8F600906014 /* JSNPageContentViewController.h */,
+				D801357B19B7C8F600906014 /* JSNPageContentViewController.m */,
+				D801357D19B7CC2600906014 /* JSNPageViewController.h */,
+				D801357E19B7CC2600906014 /* JSNPageViewController.m */,
+				D801355319B7B47500906014 /* JSNWebViewController.h */,
+				D801355419B7B47500906014 /* JSNWebViewController.m */,
+				D801353319B7943D00906014 /* JSNViewController.h */,
+				D801353419B7943D00906014 /* JSNViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D8E98CF319BA30060041EC0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D89AE91419B8F1090098BA95 /* JSNItemView.h */,
+				D89AE91519B8F1090098BA95 /* JSNItemView.m */,
+				D87F62B019B9118B00CF94FE /* JSNProductScrollViewController.xib */,
+				D80135A019B7FB9700906014 /* JSNItemView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D8E98CF419BA301C0041EC0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D80135A319B7FBD300906014 /* JSNProductDataSource.h */,
+				D80135A419B7FBD300906014 /* JSNProductDataSource.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,7 +401,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */;
+			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -686,7 +710,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */ = {
+		D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D801354B19B7943D00906014 /* Debug */,

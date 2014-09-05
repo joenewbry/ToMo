@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -55,11 +56,6 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -68,8 +64,14 @@
 
 
 - (IBAction)didPressSubmitButton:(id)sender {
-    [self.navigationController popToRootViewControllerAnimated:NO];
+    [self.activityIndicator startAnimating];
     
+    [self performSelector:@selector(didPressSubmit) withObject:nil afterDelay:2.0];
+}
+
+- (void)didPressSubmit
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
 }
 

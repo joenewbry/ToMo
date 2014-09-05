@@ -48,6 +48,8 @@
 }
 
 - (IBAction)didPressLookAround:(id)sender {
+    [self.activityIndicator stopAnimating];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
 }
 - (IBAction)didPressSignUpWithFacebook:(id)sender {
@@ -56,6 +58,7 @@
     [self.activityIndicator startAnimating];
     [self performSelector:@selector(didPressLookAround:) withObject:nil afterDelay:2.0];
 }
+
 
 - (IBAction)didPressLogInOrSignUp:(id)sender {
     //self.logInOrSignUpButton.enabled = false;

@@ -30,12 +30,32 @@
     // Do any additional setup after loading the view.
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSignUpView) name:@"JSNShowSignUpView" object:nil];
 }
 
 - (void)dismissSignUpView
 {
-    self.signUpView.hidden = YES;
-    self.shadowView.hidden = YES;
+    
+    // staggered
+    [UIView animateWithDuration:.8 animations:^{
+        self.signUpView.alpha = 0.0;
+    }];
+    
+    [UIView animateWithDuration:.4 animations:^{
+        self.shadowView.alpha = 0.0;
+    }];
+}
+
+- (void)showSignUpView
+{
+    [UIView animateWithDuration:.8 animations:^{
+        self.signUpView.alpha = 1.0;
+    }];
+    
+    [UIView animateWithDuration:.4 animations:^{
+        self.shadowView.alpha = 0.9;
+    }];
 }
 
 @end
