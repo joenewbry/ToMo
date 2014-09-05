@@ -61,20 +61,20 @@
     //self.logInOrSignUpButton.enabled = false;
     
     if (self.isLogIn) {
-        self.facebookButton.titleLabel.text = @"Log in with Facebook";
-        self.emailButton.titleLabel.text = @"Log in with Email";
-        self.logInOrSignUpButton.titleLabel.text = @"Sign Up";
+        [self.facebookButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
+        [self.emailButton setTitle:@"Log in with Email" forState:UIControlStateNormal];
+        [self.logInOrSignUpButton setTitle:@"Sign Up" forState:UIControlStateNormal];
     } else {
-        self.facebookButton.titleLabel.text = @"Sign up with Facebook";
-        self.emailButton.titleLabel.text = @"Sign up with Email";
-        self.logInOrSignUpButton.titleLabel.text = @"Log In";
+        [self.facebookButton setTitle:@"Sign up with Facebook" forState:UIControlStateNormal];
+        [self.emailButton setTitle:@"Sign up with Email" forState:UIControlStateNormal];
+        [self.logInOrSignUpButton setTitle:@"Log In" forState:UIControlStateNormal];
     }
     
 //    [self.facebookButton setNeedsLayout];
 //    [self.emailButton setNeedsLayout];
 //    [self.logInOrSignUpButton setNeedsLayout];
     
-    [self performSelector:@selector(enableLogInOrSignUp) withObject:self afterDelay:5.0];
+    //[self performSelector:@selector(enableLogInOrSignUp) withObject:self afterDelay:5.0];
     
     self.isLogIn = !self.isLogIn;
 }
