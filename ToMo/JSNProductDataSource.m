@@ -46,11 +46,13 @@
 
 - (NSString *)descriptionForItemAtIndex:(NSUInteger)index
 {
+    NSLog(@"Warning not implemented");
     return @"Default string";
 }
 
 - (NSDate *)expirationDateForItemAtIndex:(NSUInteger)index
 {
+    NSLog(@"Warning not implemented");
     return [NSDate dateWithTimeIntervalSinceNow:NSTimeIntervalSince1970];
 }
 

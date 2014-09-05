@@ -22,6 +22,9 @@
 
 @implementation JSNViewController
 
+
+#pragma mark - View Lifecyle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -34,18 +37,22 @@
     self.lookAroundButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super viewWillAppear:animated];
+    UIViewController *destinationViewController = [segue destinationViewController];
     
-    //[self.navigationController setNavigationBarHidden:YES animated:NO];
+    // configure EmailLoginOrSignUpViewController
+    if ([destinationViewController isKindOfClass:[JSNEmailLoginOrSignUpViewController class]]) {
+        JSNEmailLoginOrSignUpViewController *emailLoginOrSignUpViewController = (JSNEmailLoginOrSignUpViewController *)destinationViewController;
+        emailLoginOrSignUpViewController.submitButtonTitleText = @"Join Us";
+    }
+    
+    // display nav bar (hidden by default)
+    //[self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+#pragma mark - User input
 
 - (IBAction)didPressLookAround:(id)sender {
     [self.activityIndicator stopAnimating];
@@ -82,6 +89,8 @@
     self.isLogIn = !self.isLogIn;
 }
 
+#pragma mark - Private methods
+
 - (void)enableLogInOrSignUp
 {
     
@@ -90,20 +99,6 @@
     
     
     
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *destinationViewController = [segue destinationViewController];
-    
-    // configure EmailLoginOrSignUpViewController
-    if ([destinationViewController isKindOfClass:[JSNEmailLoginOrSignUpViewController class]]) {
-        JSNEmailLoginOrSignUpViewController *emailLoginOrSignUpViewController = (JSNEmailLoginOrSignUpViewController *)destinationViewController;
-        emailLoginOrSignUpViewController.submitButtonTitleText = @"Join Us";
-    }
-    
-    // display nav bar (hidden by default)
-    //[self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 @end

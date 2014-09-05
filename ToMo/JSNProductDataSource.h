@@ -12,9 +12,13 @@
 
 - (UIImage *)imageForItemAtIndex:(NSUInteger)index;
 - (NSString *)nameForItemAtIndex:(NSUInteger)index;
+
+- (NSInteger)numberOfItems;
+
+/* not implemented */
 - (NSString *)descriptionForItemAtIndex:(NSUInteger)index;
 - (NSDate *)expirationDateForItemAtIndex:(NSUInteger)index;
 
-- (NSInteger)numberOfItems;
+
 
 @end

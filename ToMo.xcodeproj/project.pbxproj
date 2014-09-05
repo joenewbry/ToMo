@@ -44,7 +44,6 @@
 		D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80135A019B7FB9700906014 /* JSNItemView.xib */; };
 		D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D80135A419B7FBD300906014 /* JSNProductDataSource.m */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
-		D87F62B219B9118B00CF94FE /* JSNProductScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87F62B019B9118B00CF94FE /* JSNProductScrollViewController.xib */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
 		D89AE91919B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91819B8F2DB0098BA95 /* JSNAutoScrollingTableViewController.m */; };
@@ -122,7 +121,6 @@
 		D80135A419B7FBD300906014 /* JSNProductDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductDataSource.m; sourceTree = "<group>"; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
-		D87F62B019B9118B00CF94FE /* JSNProductScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNProductScrollViewController.xib; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
 		D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSignUpNavigationViewController.m; sourceTree = "<group>"; };
 		D89AE91419B8F1090098BA95 /* JSNItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNItemView.h; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 			children = (
 				D89AE91419B8F1090098BA95 /* JSNItemView.h */,
 				D89AE91519B8F1090098BA95 /* JSNItemView.m */,
-				D87F62B019B9118B00CF94FE /* JSNProductScrollViewController.xib */,
 				D80135A019B7FB9700906014 /* JSNItemView.xib */,
 			);
 			name = Views;
@@ -432,7 +429,6 @@
 				D8E98CE519B96BBF0041EC0A /* Pie@2x.png in Resources */,
 				D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */,
 				D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */,
-				D87F62B219B9118B00CF94FE /* JSNProductScrollViewController.xib in Resources */,
 				D801353719B7943D00906014 /* Images.xcassets in Resources */,
 				D801358E19B7D58300906014 /* Garrett Leight Cali Optical.jpg in Resources */,
 				D8E98CED19B96CE30041EC0A /* Sale.png in Resources */,
