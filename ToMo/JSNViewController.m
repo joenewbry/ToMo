@@ -10,6 +10,7 @@
 #import "JSNEmailLoginOrSignUpViewController.h"
 
 @interface JSNViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *lookAroundButton;
 
 @end
 
@@ -21,6 +22,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStyleBordered target:nil action:nil];
+    
+    self.lookAroundButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -34,6 +37,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)didPressLookAround:(id)sender {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
+}
+- (IBAction)didPressSignUpWithFacebook:(id)sender {
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

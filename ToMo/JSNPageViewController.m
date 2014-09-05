@@ -32,8 +32,8 @@
     
     
     // should break out the model source into anouther class
-    _pageTitles = @[@"Dail sales of modern designs up to 70% off", @"We believe that great value can be found at any price point", @"Every day we search high and low to find the best deals on modern items", @"You can browse these unique items and view additional information", @"When you find something you love, you can purchase it in a few taps. All items are on sale for 5 days, so sign up now!"];
-    _pageImages = @[@"Agustav.jpg", @"Agustav.jpg", @"Agustav.jpg", @"Agustav.jpg", @"Agustav.jpg"];
+    _pageTitles = @[@"Daily sales of modern designs up to 70% off", @"Purchase products in three taps", @"Sales only last five days so sign up now"];
+    _pageImages = @[@"Sale.png", @"Taps.png", @"Pie.png"];
     
     self.dataSource = self;
     
