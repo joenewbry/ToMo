@@ -16,7 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UIButton *logInOrSignUpButton;
 
-@property BOOL isLogIn;
+@property BOOL isLogIn; // keep track of if user wants to sign up or log in
+                        // could move this into a model class
 
 @end
 
@@ -35,20 +36,6 @@
     _isLogIn = true;
     
     self.lookAroundButton.layer.borderColor = [UIColor whiteColor].CGColor;
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *destinationViewController = [segue destinationViewController];
-    
-    // configure EmailLoginOrSignUpViewController
-    if ([destinationViewController isKindOfClass:[JSNEmailLoginOrSignUpViewController class]]) {
-        JSNEmailLoginOrSignUpViewController *emailLoginOrSignUpViewController = (JSNEmailLoginOrSignUpViewController *)destinationViewController;
-        emailLoginOrSignUpViewController.submitButtonTitleText = @"Join Us";
-    }
-    
-    // display nav bar (hidden by default)
-    //[self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 

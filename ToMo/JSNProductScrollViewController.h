@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SwipeView/SwipeView.h> // should be prefixed
+#import <SwipeView/SwipeView.h> // from https://github.com/nicklockwood/SwipeView
 
 @interface JSNProductScrollViewController : UIViewController <SwipeViewDataSource, SwipeViewDelegate>
 @property (weak, nonatomic) IBOutlet SwipeView *scrollingItemView;

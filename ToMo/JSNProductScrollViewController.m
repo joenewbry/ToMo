@@ -12,14 +12,17 @@
 
 @interface JSNProductScrollViewController ()
 
-@property (strong, nonatomic) JSNProductDataSource *dataSource;
+@property (strong, nonatomic) JSNProductDataSource *dataSource; // dummy data source
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 
-@property BOOL isSignUp;
+@property BOOL isSignUp; // keeps track of whether or not sign up view
+                         // is being displayed on top of this view controller
 
 @end
 
 @implementation JSNProductScrollViewController
+
+#pragma mark - Lifecyle methods
 
 - (void)viewDidLoad
 {
@@ -43,44 +46,24 @@
     
     _isSignUp = true;
     
+    
     [self startScrolling];
     
+    
+    // get notified when user logs in or signs up
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
 }
 
-- (void)dismissSignUpView
-{
-    _isSignUp = false;
-    [self reloadVisibleItems];
-    
-    [self stopScrolling];
-    self.backButton.hidden = false;
-    
-}
 
-- (void)showSignUpView
-{
-    [self startScrolling];
-}
-
-- (void)startScrolling
-{
-    self.scrollingItemView.autoscroll = -0.2;
-    self.scrollingItemView.wrapEnabled = YES;
-
-}
-
-- (void)stopScrolling
-{
-    self.scrollingItemView.autoscroll = 0.0;
-    self.scrollingItemView.wrapEnabled = NO;
-
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [self startScrolling];
 }
+
+
+#pragma mark - User Input
+
 - (IBAction)didPressBack:(id)sender {
     
     // display of scrolling item view dependent on isSignUp
@@ -97,19 +80,8 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNShowSignUpView" object:nil];
 }
 
-- (void)reloadVisibleItems
-{
-    NSInteger firstItemIndex = [self.scrollingItemView.indexesForVisibleItems.firstObject integerValue];
-    NSInteger secondItemIndex = [[self.scrollingItemView.indexesForVisibleItems objectAtIndex:1] integerValue];
-    NSInteger thirdItemIndex = [self.scrollingItemView.indexesForVisibleItems.lastObject integerValue];
-    
-    
-    [self.scrollingItemView reloadItemAtIndex:firstItemIndex];
-    [self.scrollingItemView reloadItemAtIndex:secondItemIndex];    
-    [self.scrollingItemView reloadItemAtIndex:thirdItemIndex];
-}
 
-
+#pragma mark - Swipe View Data Source
 
 - (NSInteger)numberOfItemsInSwipeView:(SwipeView *)swipeView
 {
@@ -131,11 +103,62 @@
     return itemView;
 }
 
+
+#pragma mark -Swipe View Delegate
+
 - (CGSize)swipeViewItemSize:(SwipeView *)swipeView
 {
     return CGSizeMake(320, 220);
 }
 
 
+#pragma mark - Private Methods
+
+- (void)dismissSignUpView
+{
+    _isSignUp = false;
+    [self reloadVisibleItems];
+    
+    [self stopScrolling];
+    self.backButton.hidden = false;
+    
+}
+
+- (void)showSignUpView
+{
+    [self startScrolling];
+}
+
+- (void)startScrolling
+{
+    self.scrollingItemView.autoscroll = -0.2;
+    self.scrollingItemView.wrapEnabled = YES;
+    
+    self.backButton.hidden = true; // hide back when scrolling
+
+    
+}
+
+- (void)stopScrolling
+{
+    self.scrollingItemView.autoscroll = 0.0;
+    self.scrollingItemView.wrapEnabled = NO;
+    
+    self.backButton.hidden = false; // show back button when not scrolling
+
+    
+}
+
+- (void)reloadVisibleItems
+{
+    NSInteger firstItemIndex = [self.scrollingItemView.indexesForVisibleItems.firstObject integerValue];
+    NSInteger secondItemIndex = [[self.scrollingItemView.indexesForVisibleItems objectAtIndex:1] integerValue];
+    NSInteger thirdItemIndex = [self.scrollingItemView.indexesForVisibleItems.lastObject integerValue];
+    
+    
+    [self.scrollingItemView reloadItemAtIndex:firstItemIndex];
+    [self.scrollingItemView reloadItemAtIndex:secondItemIndex];
+    [self.scrollingItemView reloadItemAtIndex:thirdItemIndex];
+}
 
 @end

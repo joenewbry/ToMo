@@ -31,4 +31,8 @@
     if (self.pageIndex != 2) self.signUpButton.hidden = YES;
 }
 
+- (IBAction)didPressSignUp:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:NO];
+}
+
 @end
