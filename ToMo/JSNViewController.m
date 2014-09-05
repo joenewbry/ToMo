@@ -10,7 +10,13 @@
 #import "JSNEmailLoginOrSignUpViewController.h"
 
 @interface JSNViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *facebookButton;
+@property (weak, nonatomic) IBOutlet UIButton *emailButton;
 @property (weak, nonatomic) IBOutlet UIButton *lookAroundButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *logInOrSignUpButton;
+
+@property BOOL isLogIn;
 
 @end
 
@@ -22,6 +28,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStyleBordered target:nil action:nil];
+    
+    _isLogIn = true;
     
     self.lookAroundButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
@@ -43,6 +51,41 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
 }
 - (IBAction)didPressSignUpWithFacebook:(id)sender {
+
+    
+    [self.activityIndicator startAnimating];
+    [self performSelector:@selector(didPressLookAround:) withObject:nil afterDelay:2.0];
+}
+
+- (IBAction)didPressLogInOrSignUp:(id)sender {
+    //self.logInOrSignUpButton.enabled = false;
+    
+    if (self.isLogIn) {
+        self.facebookButton.titleLabel.text = @"Log in with Facebook";
+        self.emailButton.titleLabel.text = @"Log in with Email";
+        self.logInOrSignUpButton.titleLabel.text = @"Sign Up";
+    } else {
+        self.facebookButton.titleLabel.text = @"Sign up with Facebook";
+        self.emailButton.titleLabel.text = @"Sign up with Email";
+        self.logInOrSignUpButton.titleLabel.text = @"Log In";
+    }
+    
+//    [self.facebookButton setNeedsLayout];
+//    [self.emailButton setNeedsLayout];
+//    [self.logInOrSignUpButton setNeedsLayout];
+    
+    [self performSelector:@selector(enableLogInOrSignUp) withObject:self afterDelay:5.0];
+    
+    self.isLogIn = !self.isLogIn;
+}
+
+- (void)enableLogInOrSignUp
+{
+    
+    if (self.isLogIn) self.logInOrSignUpButton.titleLabel.text = @"Sign Up";
+    if (!self.isLogIn) self.logInOrSignUpButton.titleLabel.text = @"Log In";
+    
+    
     
 }
 
