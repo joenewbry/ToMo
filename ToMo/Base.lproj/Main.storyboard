@@ -281,7 +281,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-1E-5vT">
-                                <rect key="frame" x="17" y="454" width="287" height="47"/>
+                                <rect key="frame" x="17" y="513" width="287" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="0DA-yQ-RVO"/>
@@ -326,7 +326,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Glt-LD-4Ay" firstAttribute="top" secondItem="5MP-2m-A0e" secondAttribute="bottom" constant="121" id="0ne-mf-quf"/>
-                            <constraint firstItem="vez-Ey-RbH" firstAttribute="top" secondItem="pYE-1E-5vT" secondAttribute="bottom" constant="67" id="NKW-Bv-OCm"/>
+                            <constraint firstItem="vez-Ey-RbH" firstAttribute="top" secondItem="pYE-1E-5vT" secondAttribute="bottom" constant="8" id="NKW-Bv-OCm"/>
                             <constraint firstAttribute="trailing" secondItem="saU-Mq-W4T" secondAttribute="trailing" constant="20" id="Yx0-pJ-Bcg"/>
                             <constraint firstItem="saU-Mq-W4T" firstAttribute="top" secondItem="5MP-2m-A0e" secondAttribute="bottom" constant="-26" id="gBH-Xg-gCJ"/>
                             <constraint firstAttribute="trailing" secondItem="pYE-1E-5vT" secondAttribute="trailing" constant="16" id="n9j-ju-KIg"/>

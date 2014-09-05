@@ -47,13 +47,13 @@
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
 		D8E98CDC19B948110041EC0A /* TOMO.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CDA19B948110041EC0A /* TOMO.png */; };
 		D8E98CDD19B948110041EC0A /* TOMO@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CDB19B948110041EC0A /* TOMO@2x.png */; };
-		D8E98CE419B96BBF0041EC0A /* Pie.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CDE19B96BBF0041EC0A /* Pie.png */; };
-		D8E98CE519B96BBF0041EC0A /* Pie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CDF19B96BBF0041EC0A /* Pie@2x.png */; };
 		D8E98CE819B96BBF0041EC0A /* Taps.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CE219B96BBF0041EC0A /* Taps.png */; };
 		D8E98CE919B96BBF0041EC0A /* Taps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CE319B96BBF0041EC0A /* Taps@2x.png */; };
-		D8E98CED19B96CE30041EC0A /* Sale.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CEB19B96CE30041EC0A /* Sale.png */; };
-		D8E98CEE19B96CE30041EC0A /* Sale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CEC19B96CE30041EC0A /* Sale@2x.png */; };
 		D8E98CF119B978020041EC0A /* JSNManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E98CF019B978020041EC0A /* JSNManagementViewController.m */; };
+		D8E98CFD19BA47A20041EC0A /* Pie.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CF919BA47A20041EC0A /* Pie.png */; };
+		D8E98CFE19BA47A20041EC0A /* Pie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFA19BA47A20041EC0A /* Pie@2x.png */; };
+		D8E98CFF19BA47A20041EC0A /* Sale.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFB19BA47A20041EC0A /* Sale.png */; };
+		D8E98D0019BA47A20041EC0A /* Sale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFC19BA47A20041EC0A /* Sale@2x.png */; };
 		ECAAFE18A51B41E78F1F2390 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED226CF8334D659D4388E6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -123,14 +123,14 @@
 		D89AE91519B8F1090098BA95 /* JSNItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNItemView.m; sourceTree = "<group>"; };
 		D8E98CDA19B948110041EC0A /* TOMO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TOMO.png; sourceTree = "<group>"; };
 		D8E98CDB19B948110041EC0A /* TOMO@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TOMO@2x.png"; sourceTree = "<group>"; };
-		D8E98CDE19B96BBF0041EC0A /* Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pie.png; sourceTree = "<group>"; };
-		D8E98CDF19B96BBF0041EC0A /* Pie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pie@2x.png"; sourceTree = "<group>"; };
 		D8E98CE219B96BBF0041EC0A /* Taps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Taps.png; sourceTree = "<group>"; };
 		D8E98CE319B96BBF0041EC0A /* Taps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Taps@2x.png"; sourceTree = "<group>"; };
-		D8E98CEB19B96CE30041EC0A /* Sale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sale.png; sourceTree = "<group>"; };
-		D8E98CEC19B96CE30041EC0A /* Sale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sale@2x.png"; sourceTree = "<group>"; };
 		D8E98CEF19B978020041EC0A /* JSNManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNManagementViewController.h; sourceTree = "<group>"; };
 		D8E98CF019B978020041EC0A /* JSNManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNManagementViewController.m; sourceTree = "<group>"; };
+		D8E98CF919BA47A20041EC0A /* Pie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pie.png; sourceTree = "<group>"; };
+		D8E98CFA19BA47A20041EC0A /* Pie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pie@2x.png"; sourceTree = "<group>"; };
+		D8E98CFB19BA47A20041EC0A /* Sale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sale.png; sourceTree = "<group>"; };
+		D8E98CFC19BA47A20041EC0A /* Sale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sale@2x.png"; sourceTree = "<group>"; };
 		DF4DFAA6712C48ED95E64777 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,12 +281,12 @@
 		D8E98CEA19B96BC60041EC0A /* Sign Up */ = {
 			isa = PBXGroup;
 			children = (
-				D8E98CEB19B96CE30041EC0A /* Sale.png */,
-				D8E98CEC19B96CE30041EC0A /* Sale@2x.png */,
-				D8E98CDE19B96BBF0041EC0A /* Pie.png */,
-				D8E98CDF19B96BBF0041EC0A /* Pie@2x.png */,
 				D8E98CE219B96BBF0041EC0A /* Taps.png */,
 				D8E98CE319B96BBF0041EC0A /* Taps@2x.png */,
+				D8E98CF919BA47A20041EC0A /* Pie.png */,
+				D8E98CFA19BA47A20041EC0A /* Pie@2x.png */,
+				D8E98CFB19BA47A20041EC0A /* Sale.png */,
+				D8E98CFC19BA47A20041EC0A /* Sale@2x.png */,
 			);
 			name = "Sign Up";
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */;
+			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -448,16 +448,14 @@
 				D801358D19B7D58300906014 /* The Forma.jpg in Resources */,
 				D8E98CDC19B948110041EC0A /* TOMO.png in Resources */,
 				D8E98CE919B96BBF0041EC0A /* Taps@2x.png in Resources */,
-				D8E98CE519B96BBF0041EC0A /* Pie@2x.png in Resources */,
 				D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */,
 				D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */,
 				D801353719B7943D00906014 /* Images.xcassets in Resources */,
 				D801358E19B7D58300906014 /* Garrett Leight Cali Optical.jpg in Resources */,
-				D8E98CED19B96CE30041EC0A /* Sale.png in Resources */,
 				D801358F19B7D58300906014 /* iconbit.jpg in Resources */,
 				D801359219B7D58300906014 /* SmartPlane.jpg in Resources */,
-				D8E98CE419B96BBF0041EC0A /* Pie.png in Resources */,
 				D801357519B7C61600906014 /* mail@2x.png in Resources */,
+				D8E98D0019BA47A20041EC0A /* Sale@2x.png in Resources */,
 				D8E98CE819B96BBF0041EC0A /* Taps.png in Resources */,
 				D801358B19B7D58300906014 /* Agustav.jpg in Resources */,
 				D801359119B7D58300906014 /* Novo Watches.jpg in Resources */,
@@ -465,9 +463,11 @@
 				D801359419B7D58300906014 /* Wassily Kandinsky.jpg in Resources */,
 				D8E98CDD19B948110041EC0A /* TOMO@2x.png in Resources */,
 				D801357419B7C61600906014 /* mail.png in Resources */,
-				D8E98CEE19B96CE30041EC0A /* Sale@2x.png in Resources */,
 				D801359019B7D58300906014 /* Keysmart.jpg in Resources */,
+				D8E98CFD19BA47A20041EC0A /* Pie.png in Resources */,
 				D801357219B7C61600906014 /* facebook.png in Resources */,
+				D8E98CFE19BA47A20041EC0A /* Pie@2x.png in Resources */,
+				D8E98CFF19BA47A20041EC0A /* Sale.png in Resources */,
 				D801352919B7943D00906014 /* InfoPlist.strings in Resources */,
 				D801353219B7943D00906014 /* Main.storyboard in Resources */,
 			);
@@ -726,7 +726,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */ = {
+		D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D801354B19B7943D00906014 /* Debug */,

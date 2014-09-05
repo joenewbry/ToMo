@@ -19,7 +19,7 @@
     // page controls white and neon blue
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor blackColor];
-    pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.0/245.0 green:183.0/245.0 blue:244.0/245 alpha:1.0];
+    pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     pageControl.backgroundColor = [UIColor clearColor];
     
     // status bar is always white
