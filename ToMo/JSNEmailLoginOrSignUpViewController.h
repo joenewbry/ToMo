@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSNEmailLoginOrSignUpViewController : UIViewController
+@interface JSNEmailLoginOrSignUpViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *submitButtonTitleText;
 

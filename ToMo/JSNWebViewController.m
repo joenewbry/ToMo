@@ -26,9 +26,23 @@
     self.webView.delegate = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor blackColor]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+}
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.activityIndicator stopAnimating];
+    
+    [webView.scrollView setContentOffset:CGPointMake(0.0f, 44.0f)];
 }
+
+
 
 @end

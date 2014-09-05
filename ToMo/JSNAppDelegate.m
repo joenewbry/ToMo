@@ -28,6 +28,9 @@
     // keyboard is dark to match dark theme
     [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDark];
     
+    // text fields
+    [[UITextField appearance] setTintColor:[UIColor colorWithRed:0.0f green:183.0f/245.0f blue:244.0f/245.0f alpha:1.0f]];
+    
     // Navigation bar
 //    [[UINavigationBar appearance] setTintColor:[UIColor greenColor]];
 //    //[[UINavigationBar appearance] setBackgroundColor:[UIColor purpleColor]];

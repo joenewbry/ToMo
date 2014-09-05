@@ -37,7 +37,9 @@
     [_emailTextField setLeftViewMode:UITextFieldViewModeAlways];
     [_emailTextField setLeftView:spacerView];
     _emailTextField.layer.cornerRadius = cornerRadius;
-    
+    [self setPlaceholderText:@"Email" andTextField:_emailTextField withColor:[UIColor whiteColor]];
+    _emailTextField.delegate = self;
+
     
     UIView *passwordSpacerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     _passwordTextField.layer.borderColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1.0].CGColor;
@@ -45,9 +47,10 @@
     [_passwordTextField setLeftViewMode:UITextFieldViewModeAlways];
     [_passwordTextField setLeftView:passwordSpacerView];
     _passwordTextField.layer.cornerRadius = cornerRadius;
+    [self setPlaceholderText:@"Password" andTextField:_passwordTextField withColor:[UIColor whiteColor]];
+    _passwordTextField.delegate = self;
 
     _submitButton.layer.cornerRadius = cornerRadius;
-    
 }
 
 #pragma mark - User Input
@@ -55,7 +58,22 @@
 - (IBAction)didPressSubmitButton:(id)sender {
     [self.activityIndicator startAnimating];
     
-    [self performSelector:@selector(didPressSubmit) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(didPressSubmit) withObject:nil afterDelay:0.5];
+}
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    // if user inputs password first this won't work
+    if ([textField isEqual:self.emailTextField]) {
+        [textField resignFirstResponder];
+        [self.passwordTextField becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+        [self didPressSubmitButton:self];
+    }
+    return YES;
 }
 
 
@@ -65,6 +83,15 @@
 {
     [self.navigationController popToRootViewControllerAnimated:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNDismissSignUpView" object:self];
+}
+
+- (void)setPlaceholderText:(NSString *)text andTextField:(UITextField *)textField withColor:(UIColor *)color
+{
+    if ([textField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+    }
 }
 
 @end
