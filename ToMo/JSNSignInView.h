@@ -10,6 +10,6 @@
 
 @interface JSNSignInView : UIView
 
-- (id)init;
+- (id)initWithButtonTitle:(NSString *)title andPasswordReset:(BOOL)hasReset;
 
 @end

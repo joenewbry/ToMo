@@ -10,10 +10,16 @@
 
 @implementation JSNSignInView
 
-- (id)init
+- (id)initWithButtonTitle:(NSString *)title andPasswordReset:(BOOL)hasReset
 {
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"JSNSignInView" owner:self options:nil];
     id mainView = [subviewArray objectAtIndex:0];
+    
+    UIButton *passwordResetButton = (UIButton *)[mainView viewWithTag:4];
+    passwordResetButton.hidden = !hasReset;
+    
+    UIButton *signInOrSignUp = (UIButton *)[mainView viewWithTag:3];
+    [signInOrSignUp setTitle:title forState:UIControlStateNormal];
     
     return mainView;
 }

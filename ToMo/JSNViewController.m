@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *signUpButton;
 @property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @property (strong, nonatomic) JSNSignInView *signInView;
+@property (strong, nonatomic) JSNSignInView *signUpView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) UIScrollView *scrollView;
 
@@ -53,16 +54,27 @@
     [_scrollView setHidden:YES];
     [self.view addSubview:_scrollView];
     
-    _signInView = [[JSNSignInView alloc] init];
+    // create sign in view and add to scroll view
+    _signInView = [[JSNSignInView alloc] initWithButtonTitle:@"SIGN IN" andPasswordReset:YES];
     UIButton *signInButton = (UIButton *)[_signInView viewWithTag:3]; // sign in button
     [signInButton addTarget:self action:@selector(didPressSignIntoToMo:) forControlEvents:UIControlEventTouchUpInside];
     [_signInView setFrame:CGRectMake(0.0f, [UIScreen mainScreen].bounds.size.height - _signInView.frame.size.height, _signInView.frame.size.width, _signInView.frame.size.height)];
     [self.scrollView addSubview:_signInView];
     [_signInView setHidden:YES];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    // create sign up view, hide it and add to scroll view
+    _signUpView = [[JSNSignInView alloc] initWithButtonTitle:@"SIGN UP" andPasswordReset:NO];
+    UIButton *signUpButton = (UIButton *)[_signUpView viewWithTag:3];
+    [signUpButton addTarget:self action:@selector(didPressSignUpIntoToMo:) forControlEvents:UIControlEventTouchUpInside];
+    [_signUpView setFrame:CGRectMake(0.0f, [UIScreen mainScreen].bounds.size.height - _signUpView.frame.size.height, _signUpView.frame.size.width, _signUpView.frame.size.height)];
+    [self.scrollView addSubview:_signUpView];
     
+    // listen for keyboard notifications to adjust sign up or sign in view
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapView:)];
+    [self.view addGestureRecognizer:tap];
 }
 
 #pragma mark - User input
@@ -75,15 +87,22 @@
     [self performSelector:@selector(hideSignUp) withObject:nil afterDelay:.5];
 }
 
-- (IBAction)didPressSignIn:(id)sender {
+
+- (IBAction)didPressSignIn:(id)sender
+{
     [self.scrollView setHidden:NO];
     [self.signInView setHidden:NO];
     
-    self.emailField = (UITextField *)[self.signInView viewWithTag:1]; // email text field
-    self.emailField.delegate = self;
+    [self storeEmailAndPasswordFieldsOnView:self.signInView];
+}
+
+- (IBAction)didPressSignUp:(id)sender
+{
+    [self.scrollView setHidden:NO];
+    [self.signUpView setHidden:NO];
     
-    self.passwordField = (UITextField *)[self.signInView viewWithTag:2]; // password text field
-    self.passwordField.delegate = self;
+    // store current email and password fields for login / sign up use
+    [self storeEmailAndPasswordFieldsOnView:self.signUpView];
 }
 
 - (void)didPressSignIntoToMo:(JSNSignInView *)sender
@@ -92,21 +111,44 @@
     [self.signInView setHidden:YES];
     [self.scrollView setHidden:YES];
     
-    self.passwordField = nil; // don't need to keep track of password and email fields
-    self.emailField = nil;
-    
+    [self resetTextFields];
     [self hideSignUp];
+}
+
+- (void)didPressSignUpIntoToMo:(JSNSignInView *)sender
+{
+    [self.view endEditing:YES];
+    [self.signUpView setHidden:YES];
+    [self.scrollView setHidden:YES];
+    
+    [self resetTextFields];
+    [self hideSignUp];
+}
+
+// if view is tapped dismiss keyboard
+- (void)didTapView:(id)sender
+{
+    [self.signInView setHidden:YES];
+    [self.signUpView setHidden:YES];
+    [self.scrollView setHidden:YES];
+    [self.view endEditing:YES];
 }
 
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    if ([textField isEqual:self.emailField]) {
+    // check if both fields field, else switch to the other field
+    if (self.emailField.text.length > 0 && self.passwordField.text.length > 0)
+    {
+        [self didPressSignIntoToMo:nil];
+    }
+    else if ([textField isEqual:self.emailField]) {
         [self.passwordField becomeFirstResponder];
     } else {
         [self.emailField becomeFirstResponder];
     }
+
     return YES;
 }
 
@@ -127,6 +169,24 @@
 - (void)keyboardWillHide:(NSNotification *)aNotification
 {
     [self.scrollView setContentOffset:CGPointZero];
+}
+
+- (void)resetTextFields
+{
+    self.passwordField.text = @"";
+    self.passwordField = nil;
+    
+    self.emailField.text = @"";
+    self.emailField = nil;
+}
+
+- (void)storeEmailAndPasswordFieldsOnView:(UIView *)view
+{
+    self.emailField = (UITextField *)[view viewWithTag:1]; // email text field
+    self.emailField.delegate = self;
+    
+    self.passwordField = (UITextField *)[view viewWithTag:2]; // password text field
+    self.passwordField.delegate = self;
 }
 
 
