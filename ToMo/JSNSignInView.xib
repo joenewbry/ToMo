@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fQJ-56-ZpH">
+                    <rect key="frame" x="0.0" y="8" width="320" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="DlL-p9-NbJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-6O-xcy">
+                    <rect key="frame" x="0.0" y="52" width="320" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="z6P-68-Avg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="go" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-Us-Dcb">
+                    <rect key="frame" x="20" y="129" width="280" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.71764705880000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <state key="normal" title="SIGN IN">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="391-GX-cxQ">
+                    <rect key="frame" x="80" y="91" width="160" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="hPS-o0-Zcf"/>
+                    </constraints>
+                    <state key="normal" title="Forgot Your Password?">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fQJ-56-ZpH" firstAttribute="leading" secondItem="I7n-6O-xcy" secondAttribute="leading" id="IXb-dD-Mcg"/>
+                <constraint firstItem="I7n-6O-xcy" firstAttribute="centerX" secondItem="391-GX-cxQ" secondAttribute="centerX" id="Jze-Bc-pw0"/>
+                <constraint firstAttribute="bottom" secondItem="wZg-Us-Dcb" secondAttribute="bottom" constant="19" id="VJG-dU-4Tv"/>
+                <constraint firstAttribute="trailing" secondItem="wZg-Us-Dcb" secondAttribute="trailing" constant="20" symbolic="YES" id="Xc6-zF-nhO"/>
+                <constraint firstItem="wZg-Us-Dcb" firstAttribute="top" secondItem="391-GX-cxQ" secondAttribute="bottom" constant="8" symbolic="YES" id="dsb-Sf-HnX"/>
+                <constraint firstItem="fQJ-56-ZpH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jSC-NA-KSA"/>
+                <constraint firstItem="I7n-6O-xcy" firstAttribute="trailing" secondItem="fQJ-56-ZpH" secondAttribute="trailing" id="k5L-sW-RSm"/>
+                <constraint firstItem="wZg-Us-Dcb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" symbolic="YES" id="qmL-0D-RT8"/>
+                <constraint firstItem="391-GX-cxQ" firstAttribute="top" secondItem="I7n-6O-xcy" secondAttribute="bottom" constant="9" id="t8x-X7-o7p"/>
+                <constraint firstItem="I7n-6O-xcy" firstAttribute="top" secondItem="fQJ-56-ZpH" secondAttribute="bottom" constant="14" id="uKR-bv-GiW"/>
+                <constraint firstItem="fQJ-56-ZpH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vtn-dw-1Oe"/>
+                <constraint firstItem="391-GX-cxQ" firstAttribute="centerX" secondItem="wZg-Us-Dcb" secondAttribute="centerX" id="zqt-Lo-yge"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

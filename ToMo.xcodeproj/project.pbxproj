@@ -42,6 +42,8 @@
 		D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D80135A419B7FBD300906014 /* JSNProductDataSource.m */; };
 		D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */; };
 		D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D719BCD09A00222547 /* JSNPageViewController.m */; };
+		D80B10DB19BCF85200222547 /* JSNSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80B10DA19BCF85200222547 /* JSNSignInView.xib */; };
+		D80B10DE19BCF90D00222547 /* JSNSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10DD19BCF90D00222547 /* JSNSignInView.m */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
@@ -116,6 +118,9 @@
 		D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPageContentViewController.m; sourceTree = "<group>"; };
 		D80B10D619BCD09A00222547 /* JSNPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNPageViewController.h; sourceTree = "<group>"; };
 		D80B10D719BCD09A00222547 /* JSNPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPageViewController.m; sourceTree = "<group>"; };
+		D80B10DA19BCF85200222547 /* JSNSignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNSignInView.xib; sourceTree = "<group>"; };
+		D80B10DC19BCF90D00222547 /* JSNSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignInView.h; sourceTree = "<group>"; };
+		D80B10DD19BCF90D00222547 /* JSNSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSignInView.m; sourceTree = "<group>"; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
@@ -310,6 +315,9 @@
 		D8E98CF319BA30060041EC0A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D80B10DA19BCF85200222547 /* JSNSignInView.xib */,
+				D80B10DC19BCF90D00222547 /* JSNSignInView.h */,
+				D80B10DD19BCF90D00222547 /* JSNSignInView.m */,
 				D89AE91419B8F1090098BA95 /* JSNItemView.h */,
 				D89AE91519B8F1090098BA95 /* JSNItemView.m */,
 				D80135A019B7FB9700906014 /* JSNItemView.xib */,
@@ -420,6 +428,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Joe Newbry";
 				TargetAttributes = {
+					D801351A19B7943D00906014 = {
+						DevelopmentTeam = 2RCTX396VF;
+					};
 					D801353B19B7943D00906014 = {
 						TestTargetID = D801351A19B7943D00906014;
 					};
@@ -453,6 +464,7 @@
 				D801358D19B7D58300906014 /* The Forma.jpg in Resources */,
 				D8E98CDC19B948110041EC0A /* TOMO.png in Resources */,
 				D8E98CE919B96BBF0041EC0A /* Taps@2x.png in Resources */,
+				D80B10DB19BCF85200222547 /* JSNSignInView.xib in Resources */,
 				D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */,
 				D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */,
 				D801353719B7943D00906014 /* Images.xcassets in Resources */,
@@ -528,6 +540,7 @@
 			files = (
 				D8E98CF119B978020041EC0A /* JSNManagementViewController.m in Sources */,
 				D801352F19B7943D00906014 /* JSNAppDelegate.m in Sources */,
+				D80B10DE19BCF90D00222547 /* JSNSignInView.m in Sources */,
 				D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */,
 				D801355519B7B47500906014 /* JSNWebViewController.m in Sources */,
 				D8E98D0319BA618A0041EC0A /* JSNProductViewController.m in Sources */,
@@ -665,11 +678,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToMo/ToMo-Prefix.pch";
 				INFOPLIST_FILE = "ToMo/ToMo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -680,11 +696,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToMo/ToMo-Prefix.pch";
 				INFOPLIST_FILE = "ToMo/ToMo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

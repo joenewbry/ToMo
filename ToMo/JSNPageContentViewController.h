@@ -12,6 +12,6 @@
 
 @property NSUInteger pageIndex;
 @property NSString *titleText;
-@property NSString *imageFile;
+@property NSString *descriptionText;
 
 @end

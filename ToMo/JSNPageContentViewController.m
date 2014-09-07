@@ -10,8 +10,7 @@
 
 @interface JSNPageContentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *taglineLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *walkthroughImage;
-@property (weak, nonatomic) IBOutlet UIButton *signUpButton;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 
@@ -23,12 +22,13 @@
     // Do any additional setup after loading the view.
     
     self.taglineLabel.text = self.titleText;
-    self.walkthroughImage.image = [UIImage imageNamed:self.imageFile];
-    self.signUpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.contentLabel.text = self.descriptionText;
     
     // only show sign up button on last page
-    if (self.pageIndex == 2) self.signUpButton.hidden = NO;
-    if (self.pageIndex != 2) self.signUpButton.hidden = YES;
+    //if (self.pageIndex == 2) self.signUpButton.hidden = NO;
+    //if (self.pageIndex != 2) self.signUpButton.hidden = YES;
+    
+    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 - (IBAction)didPressSignUp:(id)sender {

@@ -23,16 +23,15 @@
     
     
     // should break out the model source into anouther class
-    _pageTitles = @[@"Daily sales of modern designs up to 70% off", @"Purchase products in three taps", @"Sales only last five days so sign up now"];
-    _pageImages = @[@"Sale.png", @"Taps.png", @"Pie.png"];
+    
+    _pageDescriptions = @[@"Discover and be inspired by truely unique,  modern design. Anytime. Anywhere.", @"Browse both big name and independent designers that offers some of the most facinating forms you’ll see.", @"Shop premium designs not typically found in local retail outlets.  Modern design that’s affordable? Yep, you heard us right!"];
+    _pageTitles = @[@"DISCOVER", @"BROWSE", @"SHOP"];
     
     self.dataSource = self;
     
     JSNPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
     [self setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    
 }
 
 
@@ -82,7 +81,7 @@
     JSNPageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     
     pageContentViewController.titleText = self.pageTitles[index];
-    pageContentViewController.imageFile = self.pageImages[index];
+    pageContentViewController.descriptionText = self.pageDescriptions[index];
     pageContentViewController.pageIndex = index;
     
     return pageContentViewController;

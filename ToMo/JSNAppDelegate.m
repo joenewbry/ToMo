@@ -18,7 +18,7 @@
     
     // page controls white and neon blue
     UIPageControl *pageControl = [UIPageControl appearance];
-    pageControl.pageIndicatorTintColor = [UIColor blackColor];
+    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.0f green:183.0f/245.0f blue:244.0f/245.0f alpha:1.0f];
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     pageControl.backgroundColor = [UIColor clearColor];
     

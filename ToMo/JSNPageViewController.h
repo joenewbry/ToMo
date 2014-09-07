@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "JSNPageContentViewController.h"
 
-@interface JSNPageViewController : UIPageViewController <UIPageViewControllerDataSource>
+@interface JSNPageViewController : UIPageViewController <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) NSArray *pageTitles;
-@property (strong, nonatomic) NSArray *pageImages;
+@property (strong, nonatomic) NSArray *pageDescriptions;
 
 @end
