@@ -40,6 +40,8 @@
 		D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */; };
 		D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80135A019B7FB9700906014 /* JSNItemView.xib */; };
 		D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D80135A419B7FBD300906014 /* JSNProductDataSource.m */; };
+		D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */; };
+		D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D719BCD09A00222547 /* JSNPageViewController.m */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
@@ -110,6 +112,10 @@
 		D80135A019B7FB9700906014 /* JSNItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNItemView.xib; sourceTree = "<group>"; };
 		D80135A319B7FBD300906014 /* JSNProductDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductDataSource.h; sourceTree = "<group>"; };
 		D80135A419B7FBD300906014 /* JSNProductDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductDataSource.m; sourceTree = "<group>"; };
+		D80B10D419BCD09A00222547 /* JSNPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNPageContentViewController.h; sourceTree = "<group>"; };
+		D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPageContentViewController.m; sourceTree = "<group>"; };
+		D80B10D619BCD09A00222547 /* JSNPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNPageViewController.h; sourceTree = "<group>"; };
+		D80B10D719BCD09A00222547 /* JSNPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPageViewController.m; sourceTree = "<group>"; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
@@ -323,6 +329,10 @@
 		D8E98CF519BA3B230041EC0A /* Product Walkthrough */ = {
 			isa = PBXGroup;
 			children = (
+				D80B10D419BCD09A00222547 /* JSNPageContentViewController.h */,
+				D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */,
+				D80B10D619BCD09A00222547 /* JSNPageViewController.h */,
+				D80B10D719BCD09A00222547 /* JSNPageViewController.m */,
 				D8E98D0119BA618A0041EC0A /* JSNProductViewController.h */,
 				D8E98D0219BA618A0041EC0A /* JSNProductViewController.m */,
 			);
@@ -415,7 +425,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */;
+			buildConfigurationList = D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -523,6 +533,8 @@
 				D8E98D0319BA618A0041EC0A /* JSNProductViewController.m in Sources */,
 				D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */,
 				D801352B19B7943D00906014 /* main.m in Sources */,
+				D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */,
+				D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */,
 				D801353519B7943D00906014 /* JSNViewController.m in Sources */,
 				D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */,
 				D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */,
@@ -720,7 +732,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D801351619B7943D00906014 /* Build configuration list for PBXProject "Tomo" */ = {
+		D801351619B7943D00906014 /* Build configuration list for PBXProject "ToMo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D801354B19B7943D00906014 /* Debug */,
