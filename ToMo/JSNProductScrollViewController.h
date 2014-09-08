@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <SwipeView/SwipeView.h> // from https://github.com/nicklockwood/SwipeView
-#import <MediaPlayer/MediaPlayer.h>
 
 
 @interface JSNProductScrollViewController : UIViewController <SwipeViewDataSource, SwipeViewDelegate>

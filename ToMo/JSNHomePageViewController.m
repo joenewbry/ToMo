@@ -13,6 +13,7 @@
 @interface JSNHomePageViewController ()
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource;
+@property (nonatomic, getter = isStatusBarHidden) BOOL statusBarHidden;
 
 @end
 
@@ -45,7 +46,7 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     
     [self.collectionView setCollectionViewLayout:flowLayout];
     
-    self.collectionView.decelerationRate = 0.0;
+    self.statusBarHidden = YES;
     
     
     // get notified when user logs in or signs up
@@ -58,14 +59,11 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
 
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    
-}
-
 - (void)dismissSignUpView
 {
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+    [self scrollToTop];
+    
+    [self toggleNavigationBarAndStatusBarVisibility]; // show status bar and navigation bar
 }
 
 - (void)scrollDown:(NSNotification *)aNotification
@@ -80,6 +78,13 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     NSIndexPath *currentIndexPath = [[self.collectionView indexPathsForVisibleItems] objectAtIndex:0];
     NSInteger row = currentIndexPath.row - 5 > 0 ? currentIndexPath.row - 5 : 0;
     [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:row  inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+}
+
+#pragma mark - User input
+
+
+- (IBAction)didPressRefresh:(id)sender {
+    [self scrollToTop];
 }
 
 
@@ -106,7 +111,50 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
 }
 
 
-#pragma mark - UICollection View Delegate
+#pragma mark - UIStatusBar Delegate
+
+- (BOOL)prefersStatusBarHidden
+{
+    return self.prefersStatusBarHidden;
+}
+
+- (void)toggleNavigationBarAndStatusBarVisibility
+{
+    BOOL willShow = self.navigationController.navigationBarHidden;
+    
+    if (willShow) {
+        [self toggleStatusBarHiddenWithAppearanceUpdate:NO];
+        [self toggleNavigationBarHiddenAnimated:YES];
+    } else {
+        [self toggleNavigationBarHiddenAnimated:YES];
+        [self toggleStatusBarHiddenWithAppearanceUpdate:YES];
+    }
+}
+
+#pragma mark - Private
+
+- (void)toggleStatusBarHiddenWithAppearanceUpdate:(BOOL)updateAppearance
+{
+    self.statusBarHidden = !self.isStatusBarHidden;
+    
+    if (updateAppearance) {
+        [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+            [self setNeedsStatusBarAppearanceUpdate];
+        }];
+    }
+}
+
+- (void)toggleNavigationBarHiddenAnimated:(BOOL)animated
+{
+    [self.navigationController
+     setNavigationBarHidden:!self.navigationController.navigationBarHidden
+     animated:animated];
+}
+
+- (void)scrollToTop
+{
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+}
 
 
 @end

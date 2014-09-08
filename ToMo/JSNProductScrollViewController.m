@@ -9,13 +9,14 @@
 #import "JSNProductScrollViewController.h"
 #import "JSNProductDataSource.h"
 #import "JSNItemView.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface JSNProductScrollViewController ()
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource; // dummy data source
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
-@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
 @property (weak, nonatomic) IBOutlet UIButton *watchIntroButton;
+@property MPMoviePlayerController *moviePlayer;
 
 @property BOOL isSignUp; // keeps track of whether or not sign up view
                          // is being displayed on top of this view controller
@@ -65,16 +66,6 @@
 
 }
 
-- (void)moviePlayBackDidFinishWithReason:(id)sender
-{
-    NSLog(@"Finished with reason");
-}
-
-//- (void)moviePlayBackDidFinishWithReason:(id)
-//{
-//    
-//}
-
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -92,8 +83,9 @@
     
     // always three visible items on screen
     
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    
     [self reloadVisibleItems];
-
     [self startScrolling];
     
     
