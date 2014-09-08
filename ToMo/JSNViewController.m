@@ -7,7 +7,6 @@
 //
 
 #import "JSNViewController.h"
-#import "JSNEmailLoginOrSignUpViewController.h"
 #import "JSNSignInView.h"
 
 @interface JSNViewController ()

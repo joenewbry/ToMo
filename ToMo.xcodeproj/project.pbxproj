@@ -37,7 +37,6 @@
 		D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D801358919B7D58300906014 /* Tribal Steel.jpg */; };
 		D801359419B7D58300906014 /* Wassily Kandinsky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D801358A19B7D58300906014 /* Wassily Kandinsky.jpg */; };
 		D801359719B7D71C00906014 /* JSNPushNoAnimationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359619B7D71C00906014 /* JSNPushNoAnimationSegue.m */; };
-		D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */; };
 		D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80135A019B7FB9700906014 /* JSNItemView.xib */; };
 		D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D80135A419B7FBD300906014 /* JSNProductDataSource.m */; };
 		D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */; };
@@ -53,7 +52,6 @@
 		D847CAC819BE396200A3D1DE /* settings20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D847CAC619BE396200A3D1DE /* settings20@2x.png */; };
 		D847CACB19BE3D8200A3D1DE /* JSNSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D847CACA19BE3D8200A3D1DE /* JSNSettingsViewController.m */; };
 		D847CACE19BE44C000A3D1DE /* UIColor+TomoColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = D847CACD19BE44C000A3D1DE /* UIColor+TomoColorPalette.m */; };
-		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
 		D8E98CDC19B948110041EC0A /* TOMO.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CDA19B948110041EC0A /* TOMO.png */; };
@@ -65,7 +63,6 @@
 		D8E98CFE19BA47A20041EC0A /* Pie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFA19BA47A20041EC0A /* Pie@2x.png */; };
 		D8E98CFF19BA47A20041EC0A /* Sale.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFB19BA47A20041EC0A /* Sale.png */; };
 		D8E98D0019BA47A20041EC0A /* Sale@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8E98CFC19BA47A20041EC0A /* Sale@2x.png */; };
-		D8E98D0319BA618A0041EC0A /* JSNProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E98D0219BA618A0041EC0A /* JSNProductViewController.m */; };
 		ECAAFE18A51B41E78F1F2390 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED226CF8334D659D4388E6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +115,6 @@
 		D801358A19B7D58300906014 /* Wassily Kandinsky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Wassily Kandinsky.jpg"; sourceTree = "<group>"; };
 		D801359519B7D71C00906014 /* JSNPushNoAnimationSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNPushNoAnimationSegue.h; sourceTree = "<group>"; };
 		D801359619B7D71C00906014 /* JSNPushNoAnimationSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNPushNoAnimationSegue.m; sourceTree = "<group>"; };
-		D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNEmailLoginOrSignUpViewController.h; sourceTree = "<group>"; };
-		D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNEmailLoginOrSignUpViewController.m; sourceTree = "<group>"; };
 		D80135A019B7FB9700906014 /* JSNItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNItemView.xib; sourceTree = "<group>"; };
 		D80135A319B7FBD300906014 /* JSNProductDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductDataSource.h; sourceTree = "<group>"; };
 		D80135A419B7FBD300906014 /* JSNProductDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductDataSource.m; sourceTree = "<group>"; };
@@ -142,8 +137,6 @@
 		D847CACA19BE3D8200A3D1DE /* JSNSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSettingsViewController.m; sourceTree = "<group>"; };
 		D847CACC19BE44C000A3D1DE /* UIColor+TomoColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TomoColorPalette.h"; sourceTree = "<group>"; };
 		D847CACD19BE44C000A3D1DE /* UIColor+TomoColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TomoColorPalette.m"; sourceTree = "<group>"; };
-		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
-		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
 		D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSignUpNavigationViewController.m; sourceTree = "<group>"; };
 		D89AE91419B8F1090098BA95 /* JSNItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNItemView.h; sourceTree = "<group>"; };
@@ -158,8 +151,6 @@
 		D8E98CFA19BA47A20041EC0A /* Pie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pie@2x.png"; sourceTree = "<group>"; };
 		D8E98CFB19BA47A20041EC0A /* Sale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sale.png; sourceTree = "<group>"; };
 		D8E98CFC19BA47A20041EC0A /* Sale@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sale@2x.png"; sourceTree = "<group>"; };
-		D8E98D0119BA618A0041EC0A /* JSNProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductViewController.h; sourceTree = "<group>"; };
-		D8E98D0219BA618A0041EC0A /* JSNProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductViewController.m; sourceTree = "<group>"; };
 		DF4DFAA6712C48ED95E64777 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -372,8 +363,6 @@
 				D80B10D519BCD09A00222547 /* JSNPageContentViewController.m */,
 				D80B10D619BCD09A00222547 /* JSNPageViewController.h */,
 				D80B10D719BCD09A00222547 /* JSNPageViewController.m */,
-				D8E98D0119BA618A0041EC0A /* JSNProductViewController.h */,
-				D8E98D0219BA618A0041EC0A /* JSNProductViewController.m */,
 			);
 			name = "Product Walkthrough";
 			sourceTree = "<group>";
@@ -385,8 +374,6 @@
 				D801353419B7943D00906014 /* JSNViewController.m */,
 				D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */,
 				D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */,
-				D801359819B7E24100906014 /* JSNEmailLoginOrSignUpViewController.h */,
-				D801359919B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m */,
 			);
 			name = "Sign Up";
 			sourceTree = "<group>";
@@ -407,8 +394,6 @@
 				D847CACA19BE3D8200A3D1DE /* JSNSettingsViewController.m */,
 				D847CAC019BE001500A3D1DE /* JSNHomePageViewController.h */,
 				D847CAC119BE001500A3D1DE /* JSNHomePageViewController.m */,
-				D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */,
-				D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */,
 			);
 			name = "Main App";
 			sourceTree = "<group>";
@@ -580,9 +565,7 @@
 				D8E98CF119B978020041EC0A /* JSNManagementViewController.m in Sources */,
 				D801352F19B7943D00906014 /* JSNAppDelegate.m in Sources */,
 				D80B10DE19BCF90D00222547 /* JSNSignInView.m in Sources */,
-				D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */,
 				D801355519B7B47500906014 /* JSNWebViewController.m in Sources */,
-				D8E98D0319BA618A0041EC0A /* JSNProductViewController.m in Sources */,
 				D847CACB19BE3D8200A3D1DE /* JSNSettingsViewController.m in Sources */,
 				D847CAC219BE001500A3D1DE /* JSNHomePageViewController.m in Sources */,
 				D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */,
@@ -591,7 +574,6 @@
 				D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */,
 				D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */,
 				D801353519B7943D00906014 /* JSNViewController.m in Sources */,
-				D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */,
 				D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */,
 				D801359719B7D71C00906014 /* JSNPushNoAnimationSegue.m in Sources */,
 				D80135A519B7FBD300906014 /* JSNProductDataSource.m in Sources */,
