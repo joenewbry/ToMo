@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSNItemView : UIView
+@interface JSNItemView : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *itemDescriptionLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *itemImageView;

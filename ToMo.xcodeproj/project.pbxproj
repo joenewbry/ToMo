@@ -47,6 +47,8 @@
 		D826BA8D19BD4692005B4AF4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */; };
 		D826BA8F19BD46DC005B4AF4 /* Jimmy-20140907185404.mov in Resources */ = {isa = PBXBuildFile; fileRef = D826BA8E19BD46DC005B4AF4 /* Jimmy-20140907185404.mov */; };
 		D826BA9119BD488B005B4AF4 /* Jimmy-20140907191321.mov in Resources */ = {isa = PBXBuildFile; fileRef = D826BA9019BD488B005B4AF4 /* Jimmy-20140907191321.mov */; };
+		D847CAC219BE001500A3D1DE /* JSNHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D847CAC119BE001500A3D1DE /* JSNHomePageViewController.m */; };
+		D847CAC419BE0EAE00A3D1DE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D847CAC319BE0EAE00A3D1DE /* QuartzCore.framework */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
@@ -127,6 +129,9 @@
 		D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D826BA8E19BD46DC005B4AF4 /* Jimmy-20140907185404.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Jimmy-20140907185404.mov"; sourceTree = "<group>"; };
 		D826BA9019BD488B005B4AF4 /* Jimmy-20140907191321.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Jimmy-20140907191321.mov"; sourceTree = "<group>"; };
+		D847CAC019BE001500A3D1DE /* JSNHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNHomePageViewController.h; sourceTree = "<group>"; };
+		D847CAC119BE001500A3D1DE /* JSNHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNHomePageViewController.m; sourceTree = "<group>"; };
+		D847CAC319BE0EAE00A3D1DE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
@@ -153,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D847CAC419BE0EAE00A3D1DE /* QuartzCore.framework in Frameworks */,
 				D826BA8D19BD4692005B4AF4 /* MediaPlayer.framework in Frameworks */,
 				D801352119B7943D00906014 /* CoreGraphics.framework in Frameworks */,
 				D801352319B7943D00906014 /* UIKit.framework in Frameworks */,
@@ -197,6 +203,7 @@
 		D801351D19B7943D00906014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D847CAC319BE0EAE00A3D1DE /* QuartzCore.framework */,
 				D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */,
 				D801351E19B7943D00906014 /* Foundation.framework */,
 				D801352019B7943D00906014 /* CoreGraphics.framework */,
@@ -382,6 +389,8 @@
 		D8E98CF819BA3BCF0041EC0A /* Main App */ = {
 			isa = PBXGroup;
 			children = (
+				D847CAC019BE001500A3D1DE /* JSNHomePageViewController.h */,
+				D847CAC119BE001500A3D1DE /* JSNHomePageViewController.m */,
 				D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */,
 				D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */,
 			);
@@ -556,6 +565,7 @@
 				D801359A19B7E24100906014 /* JSNEmailLoginOrSignUpViewController.m in Sources */,
 				D801355519B7B47500906014 /* JSNWebViewController.m in Sources */,
 				D8E98D0319BA618A0041EC0A /* JSNProductViewController.m in Sources */,
+				D847CAC219BE001500A3D1DE /* JSNHomePageViewController.m in Sources */,
 				D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */,
 				D801352B19B7943D00906014 /* main.m in Sources */,
 				D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */,

@@ -29,19 +29,19 @@
 
 - (NSInteger)numberOfItems
 {
-    return [self.itemNames count];
+    return [self.itemNames count] * 4;
 }
 
 - (UIImage *)imageForItemAtIndex:(NSUInteger)index
 {
-    NSString *itemName = [self.itemNames objectAtIndex:index];
+    NSString *itemName = [self.itemNames objectAtIndex:index % 8];
     NSString *imagePath = [itemName stringByAppendingString:@".jpg"];
     return [UIImage imageNamed:imagePath];
 }
 
 - (NSString *)nameForItemAtIndex:(NSUInteger)index
 {
-    return [self.itemNames objectAtIndex:index];
+    return [self.itemNames objectAtIndex:index % 8];
 }
 
 - (NSString *)descriptionForItemAtIndex:(NSUInteger)index
