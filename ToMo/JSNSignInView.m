@@ -21,6 +21,7 @@
     UIButton *signInOrSignUp = (UIButton *)[mainView viewWithTag:3];
     [signInOrSignUp setTitle:title forState:UIControlStateNormal];
     
+    
     return mainView;
 }
 

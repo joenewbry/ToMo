@@ -52,6 +52,8 @@
     
     // get notified when user logs in or signs up
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
+    
+    // play 
 }
 
 
