@@ -31,6 +31,9 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollDown:) name:@"JSNScrollDown" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollUp:) name:@"JSNScrollUp" object:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSignUpView) name:@"JSNShowSignUpView" object:nil];
 }
 
@@ -55,6 +58,22 @@
     
     [UIView animateWithDuration:.4 animations:^{
         self.shadowView.alpha = 0.9;
+    }];
+}
+
+- (void)scrollDown:(NSNotification *)aNotification
+{
+    NSLog(@"Scroll Down");
+    [UIView animateWithDuration:.2 animations:^{
+            self.shadowView.alpha = self.shadowView.alpha - 0.1;
+    }];
+}
+
+- (void)scrollUp:(NSNotification *)aNotification
+{
+    NSLog(@"Scroll Up");
+    [UIView animateWithDuration:.2 animations:^{
+            self.shadowView.alpha = self.shadowView.alpha + 0.1;
     }];
 }
 

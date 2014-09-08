@@ -39,11 +39,47 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     _dataSource = [[JSNProductDataSource alloc] init];
     
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(158, 107);
-    [flowLayout setMinimumLineSpacing:2.0];
-    
+    flowLayout.itemSize = CGSizeMake(158, 106);
+    [flowLayout setMinimumLineSpacing:4.0];
+    [flowLayout setMinimumInteritemSpacing:4.0];
     
     [self.collectionView setCollectionViewLayout:flowLayout];
+    
+    self.collectionView.decelerationRate = 0.0;
+    
+    
+    // get notified when user logs in or signs up
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollDown:) name:@"JSNScrollDown" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollUp:) name:@"JSNScrollUp" object:nil];
+    
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    
+}
+
+- (void)dismissSignUpView
+{
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+}
+
+- (void)scrollDown:(NSNotification *)aNotification
+{
+    NSIndexPath *currentIndexPath = [[self.collectionView indexPathsForVisibleItems] objectAtIndex:0];
+    NSInteger row = currentIndexPath.row + 5 < [self.dataSource numberOfItems] ? currentIndexPath.row + 5 : [self.dataSource numberOfItems] - 1;
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:row  inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+}
+
+- (void)scrollUp:(NSNotification *)aNotification
+{
+    NSIndexPath *currentIndexPath = [[self.collectionView indexPathsForVisibleItems] objectAtIndex:0];
+    NSInteger row = currentIndexPath.row - 5 > 0 ? currentIndexPath.row - 5 : 0;
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:row  inSection:0] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
 }
 
 
@@ -71,7 +107,6 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
 
 
 #pragma mark - UICollection View Delegate
-
 
 
 @end

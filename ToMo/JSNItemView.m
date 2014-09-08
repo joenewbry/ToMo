@@ -35,9 +35,6 @@
     gradient.colors = @[(id)[[UIColor clearColor] CGColor],
                         (id)[[UIColor blackColor] CGColor]];
     [itemImageView.layer insertSublayer:gradient atIndex:0];
-    
-    
-    
 }
 
 @end

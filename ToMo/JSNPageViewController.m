@@ -28,6 +28,7 @@
     _pageTitles = @[@"DISCOVER", @"BROWSE", @"SHOP"];
     
     self.dataSource = self;
+    self.delegate = self;
     
     JSNPageContentViewController *startingViewController = [self viewControllerAtIndex:0];
     NSArray *viewControllers = @[startingViewController];
@@ -40,6 +41,10 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
     NSUInteger index = ((JSNPageContentViewController *) viewController).pageIndex;
     
+    // scroll the view behind
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNScrollUp" object:self userInfo:nil];
+    
+    
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
     }
@@ -50,6 +55,10 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     NSUInteger index = ((JSNPageContentViewController *) viewController).pageIndex;
+
+    // scroll the view behind
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNScrollDown" object:self userInfo:nil];
+
     
     if (index == NSNotFound) {
         return nil;
