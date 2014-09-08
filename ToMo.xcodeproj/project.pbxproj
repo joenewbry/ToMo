@@ -52,6 +52,7 @@
 		D847CAC719BE396200A3D1DE /* arrow408@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D847CAC519BE396200A3D1DE /* arrow408@2x.png */; };
 		D847CAC819BE396200A3D1DE /* settings20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D847CAC619BE396200A3D1DE /* settings20@2x.png */; };
 		D847CACB19BE3D8200A3D1DE /* JSNSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D847CACA19BE3D8200A3D1DE /* JSNSettingsViewController.m */; };
+		D847CACE19BE44C000A3D1DE /* UIColor+TomoColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = D847CACD19BE44C000A3D1DE /* UIColor+TomoColorPalette.m */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
@@ -139,6 +140,8 @@
 		D847CAC619BE396200A3D1DE /* settings20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings20@2x.png"; sourceTree = "<group>"; };
 		D847CAC919BE3D8200A3D1DE /* JSNSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSettingsViewController.h; sourceTree = "<group>"; };
 		D847CACA19BE3D8200A3D1DE /* JSNSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSettingsViewController.m; sourceTree = "<group>"; };
+		D847CACC19BE44C000A3D1DE /* UIColor+TomoColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TomoColorPalette.h"; sourceTree = "<group>"; };
+		D847CACD19BE44C000A3D1DE /* UIColor+TomoColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TomoColorPalette.m"; sourceTree = "<group>"; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 		D801352519B7943D00906014 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D847CACC19BE44C000A3D1DE /* UIColor+TomoColorPalette.h */,
+				D847CACD19BE44C000A3D1DE /* UIColor+TomoColorPalette.m */,
 				D801352619B7943D00906014 /* ToMo-Info.plist */,
 				D801352719B7943D00906014 /* InfoPlist.strings */,
 				D801352A19B7943D00906014 /* main.m */,
@@ -582,6 +587,7 @@
 				D847CAC219BE001500A3D1DE /* JSNHomePageViewController.m in Sources */,
 				D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */,
 				D801352B19B7943D00906014 /* main.m in Sources */,
+				D847CACE19BE44C000A3D1DE /* UIColor+TomoColorPalette.m in Sources */,
 				D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */,
 				D80B10D819BCD09A00222547 /* JSNPageContentViewController.m in Sources */,
 				D801353519B7943D00906014 /* JSNViewController.m in Sources */,

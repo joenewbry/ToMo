@@ -13,7 +13,6 @@
 @interface JSNHomePageViewController ()
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource;
-@property (nonatomic, getter = isStatusBarHidden) BOOL statusBarHidden;
 
 @end
 
@@ -46,7 +45,7 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     
     [self.collectionView setCollectionViewLayout:flowLayout];
     
-    self.statusBarHidden = YES;
+    [self.navigationController setNavigationBarHidden:YES];
     
     
     // get notified when user logs in or signs up
@@ -59,11 +58,13 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
 
 }
 
+
+#pragma mark - Target Action Notifications
 - (void)dismissSignUpView
 {
     [self scrollToTop];
     
-    [self toggleNavigationBarAndStatusBarVisibility]; // show status bar and navigation bar
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)scrollDown:(NSNotification *)aNotification
@@ -110,46 +111,7 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     return cell;
 }
 
-
-#pragma mark - UIStatusBar Delegate
-
-- (BOOL)prefersStatusBarHidden
-{
-    return self.prefersStatusBarHidden;
-}
-
-- (void)toggleNavigationBarAndStatusBarVisibility
-{
-    BOOL willShow = self.navigationController.navigationBarHidden;
-    
-    if (willShow) {
-        [self toggleStatusBarHiddenWithAppearanceUpdate:NO];
-        [self toggleNavigationBarHiddenAnimated:YES];
-    } else {
-        [self toggleNavigationBarHiddenAnimated:YES];
-        [self toggleStatusBarHiddenWithAppearanceUpdate:YES];
-    }
-}
-
 #pragma mark - Private
-
-- (void)toggleStatusBarHiddenWithAppearanceUpdate:(BOOL)updateAppearance
-{
-    self.statusBarHidden = !self.isStatusBarHidden;
-    
-    if (updateAppearance) {
-        [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
-            [self setNeedsStatusBarAppearanceUpdate];
-        }];
-    }
-}
-
-- (void)toggleNavigationBarHiddenAnimated:(BOOL)animated
-{
-    [self.navigationController
-     setNavigationBarHidden:!self.navigationController.navigationBarHidden
-     animated:animated];
-}
 
 - (void)scrollToTop
 {

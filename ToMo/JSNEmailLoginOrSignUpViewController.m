@@ -32,7 +32,7 @@
     CGFloat cornerRadius = 6.0;
     
     UIView *spacerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-    _emailTextField.layer.borderColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1.0].CGColor;
+    _emailTextField.layer.borderColor = [UIColor blackColor].CGColor;
     _emailTextField.layer.borderWidth = 1.0;
     [_emailTextField setLeftViewMode:UITextFieldViewModeAlways];
     [_emailTextField setLeftView:spacerView];

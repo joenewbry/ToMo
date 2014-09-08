@@ -7,6 +7,8 @@
 //
 
 #import "JSNAppDelegate.h"
+#import "UIColor+TomoColorPalette.h"
+
 
 @implementation JSNAppDelegate
 
@@ -18,7 +20,7 @@
     
     // page controls white and neon blue
     UIPageControl *pageControl = [UIPageControl appearance];
-    pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.0f green:183.0f/245.0f blue:244.0f/245.0f alpha:1.0f];
+    pageControl.pageIndicatorTintColor = [UIColor neonBlueColor];
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     pageControl.backgroundColor = [UIColor clearColor];
     
@@ -29,7 +31,7 @@
     [[UITextField appearance] setKeyboardAppearance:UIKeyboardAppearanceDark];
     
     // text fields
-    [[UITextField appearance] setTintColor:[UIColor colorWithRed:0.0f green:183.0f/245.0f blue:244.0f/245.0f alpha:1.0f]];
+    [[UITextField appearance] setTintColor:[UIColor neonBlueColor]];
     
     // Navigation bar
 //    [[UINavigationBar appearance] setTintColor:[UIColor greenColor]];
