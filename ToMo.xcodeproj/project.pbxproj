@@ -44,6 +44,9 @@
 		D80B10D919BCD09A00222547 /* JSNPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10D719BCD09A00222547 /* JSNPageViewController.m */; };
 		D80B10DB19BCF85200222547 /* JSNSignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80B10DA19BCF85200222547 /* JSNSignInView.xib */; };
 		D80B10DE19BCF90D00222547 /* JSNSignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = D80B10DD19BCF90D00222547 /* JSNSignInView.m */; };
+		D826BA8D19BD4692005B4AF4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */; };
+		D826BA8F19BD46DC005B4AF4 /* Jimmy-20140907185404.mov in Resources */ = {isa = PBXBuildFile; fileRef = D826BA8E19BD46DC005B4AF4 /* Jimmy-20140907185404.mov */; };
+		D826BA9119BD488B005B4AF4 /* Jimmy-20140907191321.mov in Resources */ = {isa = PBXBuildFile; fileRef = D826BA9019BD488B005B4AF4 /* Jimmy-20140907191321.mov */; };
 		D87F62B119B9118B00CF94FE /* JSNProductScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */; };
 		D89873F019B931FD00F3ABDA /* JSNSignUpNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89873EF19B931FD00F3ABDA /* JSNSignUpNavigationViewController.m */; };
 		D89AE91619B8F1090098BA95 /* JSNItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = D89AE91519B8F1090098BA95 /* JSNItemView.m */; };
@@ -121,6 +124,9 @@
 		D80B10DA19BCF85200222547 /* JSNSignInView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNSignInView.xib; sourceTree = "<group>"; };
 		D80B10DC19BCF90D00222547 /* JSNSignInView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignInView.h; sourceTree = "<group>"; };
 		D80B10DD19BCF90D00222547 /* JSNSignInView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNSignInView.m; sourceTree = "<group>"; };
+		D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		D826BA8E19BD46DC005B4AF4 /* Jimmy-20140907185404.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Jimmy-20140907185404.mov"; sourceTree = "<group>"; };
+		D826BA9019BD488B005B4AF4 /* Jimmy-20140907191321.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Jimmy-20140907191321.mov"; sourceTree = "<group>"; };
 		D87F62AE19B9118B00CF94FE /* JSNProductScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNProductScrollViewController.h; sourceTree = "<group>"; };
 		D87F62AF19B9118B00CF94FE /* JSNProductScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNProductScrollViewController.m; sourceTree = "<group>"; };
 		D89873EE19B931FD00F3ABDA /* JSNSignUpNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNSignUpNavigationViewController.h; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D826BA8D19BD4692005B4AF4 /* MediaPlayer.framework in Frameworks */,
 				D801352119B7943D00906014 /* CoreGraphics.framework in Frameworks */,
 				D801352319B7943D00906014 /* UIKit.framework in Frameworks */,
 				D801351F19B7943D00906014 /* Foundation.framework in Frameworks */,
@@ -190,6 +197,7 @@
 		D801351D19B7943D00906014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D826BA8C19BD4692005B4AF4 /* MediaPlayer.framework */,
 				D801351E19B7943D00906014 /* Foundation.framework */,
 				D801352019B7943D00906014 /* CoreGraphics.framework */,
 				D801352219B7943D00906014 /* UIKit.framework */,
@@ -249,6 +257,8 @@
 		D801355619B7BF6600906014 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				D826BA9019BD488B005B4AF4 /* Jimmy-20140907191321.mov */,
+				D826BA8E19BD46DC005B4AF4 /* Jimmy-20140907185404.mov */,
 				D801356D19B7C61600906014 /* img */,
 			);
 			path = assets;
@@ -464,6 +474,7 @@
 				D801358D19B7D58300906014 /* The Forma.jpg in Resources */,
 				D8E98CDC19B948110041EC0A /* TOMO.png in Resources */,
 				D8E98CE919B96BBF0041EC0A /* Taps@2x.png in Resources */,
+				D826BA8F19BD46DC005B4AF4 /* Jimmy-20140907185404.mov in Resources */,
 				D80B10DB19BCF85200222547 /* JSNSignInView.xib in Resources */,
 				D80135A219B7FB9700906014 /* JSNItemView.xib in Resources */,
 				D801359319B7D58300906014 /* Tribal Steel.jpg in Resources */,
@@ -479,6 +490,7 @@
 				D801358C19B7D58300906014 /* Del Ben.jpg in Resources */,
 				D801359419B7D58300906014 /* Wassily Kandinsky.jpg in Resources */,
 				D8E98CDD19B948110041EC0A /* TOMO@2x.png in Resources */,
+				D826BA9119BD488B005B4AF4 /* Jimmy-20140907191321.mov in Resources */,
 				D801357419B7C61600906014 /* mail.png in Resources */,
 				D801359019B7D58300906014 /* Keysmart.jpg in Resources */,
 				D8E98CFD19BA47A20041EC0A /* Pie.png in Resources */,

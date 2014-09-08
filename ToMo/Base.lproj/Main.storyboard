@@ -39,6 +39,26 @@
                                     <action selector="didPressBack:" destination="YAt-9X-M33" eventType="touchUpInside" id="m5R-3I-DKA"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqw-Wf-ERu">
+                                <rect key="frame" x="0.0" y="462" width="320" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.54045647379999995" green="0.54044032099999995" blue="0.54044950010000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="86k-Xb-lAx"/>
+                                    <constraint firstAttribute="height" constant="53" id="9iF-H5-FRa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="HnI-wc-gYD"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="Wj3-i1-lB8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Watch Intro">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressBack:" destination="YAt-9X-M33" eventType="touchUpInside" id="8T9-cZ-sRK"/>
+                                    <action selector="didPressWatchIntro:" destination="YAt-9X-M33" eventType="touchUpInside" id="PHW-Fo-WPw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -47,6 +67,9 @@
                             <constraint firstItem="d2F-AG-7jY" firstAttribute="top" secondItem="2dF-I6-oSe" secondAttribute="top" id="AEA-6h-mKg"/>
                             <constraint firstItem="d2F-AG-7jY" firstAttribute="bottom" secondItem="iqr-d7-pse" secondAttribute="bottom" id="P8S-SP-G7f"/>
                             <constraint firstItem="d2F-AG-7jY" firstAttribute="leading" secondItem="2dF-I6-oSe" secondAttribute="leading" id="UVt-SO-F3d"/>
+                            <constraint firstItem="iqr-d7-pse" firstAttribute="top" secondItem="Qqw-Wf-ERu" secondAttribute="bottom" id="bVx-Ee-UH4"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqw-Wf-ERu" secondAttribute="trailing" id="ldi-ZR-shA"/>
+                            <constraint firstItem="Qqw-Wf-ERu" firstAttribute="leading" secondItem="2dF-I6-oSe" secondAttribute="leading" id="wuw-PJ-0M9"/>
                             <constraint firstAttribute="trailing" secondItem="iqr-d7-pse" secondAttribute="trailing" id="yqc-5w-CQ5"/>
                             <constraint firstItem="iqr-d7-pse" firstAttribute="leading" secondItem="2dF-I6-oSe" secondAttribute="leading" id="zLB-gg-44u"/>
                         </constraints>
@@ -54,6 +77,7 @@
                     <connections>
                         <outlet property="backButton" destination="iqr-d7-pse" id="Wqq-tw-6vB"/>
                         <outlet property="scrollingItemView" destination="d2F-AG-7jY" id="K5e-s5-TPv"/>
+                        <outlet property="watchIntroButton" destination="Qqw-Wf-ERu" id="9E3-Mf-iGy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZD-cj-rVi" userLabel="First Responder" sceneMemberID="firstResponder"/>

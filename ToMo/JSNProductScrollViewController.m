@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource; // dummy data source
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (strong, nonatomic) MPMoviePlayerController *moviePlayer;
+@property (weak, nonatomic) IBOutlet UIButton *watchIntroButton;
 
 @property BOOL isSignUp; // keeps track of whether or not sign up view
                          // is being displayed on top of this view controller
@@ -53,8 +55,25 @@
     // get notified when user logs in or signs up
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissSignUpView) name:@"JSNDismissSignUpView" object:nil];
     
-    // play 
+
+    
 }
+
+- (void)moviePlayBackDidFinish:(id)sender
+{
+    [self.moviePlayer.view removeFromSuperview];
+
+}
+
+- (void)moviePlayBackDidFinishWithReason:(id)sender
+{
+    NSLog(@"Finished with reason");
+}
+
+//- (void)moviePlayBackDidFinishWithReason:(id)
+//{
+//    
+//}
 
 
 
@@ -82,6 +101,32 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JSNShowSignUpView" object:nil];
 }
 
+- (IBAction)didPressWatchIntro:(id)sender {
+    // play movie
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"Jimmy-20140907191321" ofType:@"mov"];
+    NSURL *fileURL = [NSURL fileURLWithPath:filepath];
+    
+    _moviePlayer =[[MPMoviePlayerController alloc] initWithContentURL:fileURL];
+    
+    [_moviePlayer prepareToPlay];
+    [_moviePlayer.view setFrame:self.view.bounds];
+    [_moviePlayer setRepeatMode:MPMovieRepeatModeOne];
+
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(moviePlayBackDidFinish:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+                                                   object:_moviePlayer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(moviePlayBackDidFinishWithReason:) name:MPMoviePlayerPlaybackDidFinishReasonUserInfoKey object:_moviePlayer];
+    
+    _moviePlayer.controlStyle = MPMovieControlStyleDefault;
+    _moviePlayer.shouldAutoplay = YES;
+    [_moviePlayer setRepeatMode:MPMovieRepeatModeNone];
+    [self.view addSubview:_moviePlayer.view];
+    [_moviePlayer setFullscreen:YES animated:YES];
+    [_moviePlayer play];
+}
 
 #pragma mark - Swipe View Data Source
 
@@ -123,6 +168,7 @@
     
     [self stopScrolling];
     self.backButton.hidden = false;
+    self.watchIntroButton.hidden = false;
     
 }
 
@@ -137,6 +183,7 @@
     self.scrollingItemView.wrapEnabled = YES;
     
     self.backButton.hidden = true; // hide back when scrolling
+    self.watchIntroButton.hidden = true;
 
     
 }
