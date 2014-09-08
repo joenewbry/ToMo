@@ -8,6 +8,8 @@
 
 #import "JSNProductDataSource.h"
 
+
+
 @interface JSNProductDataSource ()
 
 @property (strong, nonatomic) NSArray *itemImages;
@@ -32,19 +34,39 @@
     return [self.itemNames count] * 4;
 }
 
-- (UIImage *)imageForItemAtIndex:(NSUInteger)index
+- (UIImage *)imageForItemAtIndex:(NSUInteger)index sortedBy:(JSNProductSort)type
 {
-    NSString *itemName = [self.itemNames objectAtIndex:index % 8];
-    NSString *imagePath = [itemName stringByAppendingString:@".jpg"];
+    NSString *itemName;
+    NSString *imagePath;
+    NSUInteger randIndex = (NSUInteger)arc4random() % 8;
+
+    switch (type) {
+        case JSNProductSortByNewest:
+            itemName = [self.itemNames objectAtIndex:index % 8];
+            imagePath = [itemName stringByAppendingString:@".jpg"];
+        break;
+            
+        case JSNProductSortByPopular:
+            itemName = [self.itemNames objectAtIndex:randIndex];
+            imagePath = [itemName stringByAppendingString:@".jpg"];
+        break;
+            
+        case JSNProductSortByTrending:
+            itemName = [self.itemNames objectAtIndex:index];
+            imagePath = [itemName stringByAppendingString:@".jpg"];
+        break;
+    }
+
     return [UIImage imageNamed:imagePath];
 }
 
-- (NSString *)nameForItemAtIndex:(NSUInteger)index
+- (NSString *)nameForItemAtIndex:(NSUInteger)index sortedBy:(JSNProductSort)type
 {
     return [self.itemNames objectAtIndex:index % 8];
 }
 
-- (NSString *)descriptionForItemAtIndex:(NSUInteger)index
+
+- (NSString *)descriptionForItemAtIndex:(NSUInteger)index sortedBy:(JSNProductSort)type
 {
     NSLog(@"Warning not implemented");
     return @"Default string";

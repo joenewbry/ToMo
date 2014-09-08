@@ -86,6 +86,9 @@
                                 <segment title="Trending"/>
                             </segments>
                             <color key="tintColor" red="0.0" green="0.71764705880000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="didChangeFilterPreference:" destination="WhD-6G-IL6" eventType="valueChanged" id="1CB-JR-P71"/>
+                            </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" image="arrow408.png" id="eXN-gw-3Vq">
                             <color key="tintColor" red="0.0" green="0.71764705880000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +97,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="filterBySegmentedControl" destination="Oib-hy-HH7" id="GEZ-lG-9BQ"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEN-MY-Moh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,7 +108,7 @@
         <!--Navigation Controller-->
         <scene sceneID="m8e-lQ-RJW">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="kMu-Zl-X6L" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="kMu-Zl-X6L" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="60H-U6-lYQ">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

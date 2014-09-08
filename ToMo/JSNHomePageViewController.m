@@ -13,6 +13,7 @@
 @interface JSNHomePageViewController ()
 
 @property (strong, nonatomic) JSNProductDataSource *dataSource;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *filterBySegmentedControl;
 
 @end
 
@@ -88,6 +89,10 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
     [self scrollToTop];
 }
 
+- (IBAction)didChangeFilterPreference:(id)sender {
+    [self.collectionView reloadData];
+    //[self.collectionView reloadItemsAtIndexPaths:[self.collectionView visibleCells]];
+}
 
 #pragma mark - UICollectionViewDataSource
 
@@ -105,8 +110,10 @@ static NSString* cellIdentifier = @"RegularCellIdentifier";
 {
     JSNItemView *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    cell.itemDescriptionLabel.text = [self.dataSource nameForItemAtIndex:indexPath.row];
-    cell.itemImageView.image = [self.dataSource imageForItemAtIndex:indexPath.row];
+    NSInteger integer = self.filterBySegmentedControl.selectedSegmentIndex;
+    
+    cell.itemDescriptionLabel.text = [self.dataSource nameForItemAtIndex:indexPath.row sortedBy:(JSNProductSort)self.filterBySegmentedControl.selectedSegmentIndex];
+    cell.itemImageView.image = [self.dataSource imageForItemAtIndex:indexPath.row sortedBy:(JSNProductSort)self.filterBySegmentedControl.selectedSegmentIndex];
     
     return cell;
 }

@@ -8,10 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, JSNProductSort) {
+    JSNProductSortByNewest,
+    JSNProductSortByPopular,
+    JSNProductSortByTrending
+};
+
 @interface JSNProductDataSource : NSObject
 
-- (UIImage *)imageForItemAtIndex:(NSUInteger)index;
-- (NSString *)nameForItemAtIndex:(NSUInteger)index;
+- (UIImage *)imageForItemAtIndex:(NSUInteger)index sortedBy:(JSNProductSort)type;
+- (NSString *)nameForItemAtIndex:(NSUInteger)index sortedBy:(JSNProductSort)type;
+;
 
 - (NSInteger)numberOfItems;
 
